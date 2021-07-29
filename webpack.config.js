@@ -2,12 +2,12 @@ const path = require('path');
 const CssMinimizerWebpackPligin = require('css-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin =require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
  
 module.exports = {
 	mode: 'development',
-	entry: './compomemts/index.js',
+	entry: './index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'scripts.js'
@@ -20,7 +20,6 @@ module.exports = {
 		  },
 		  {
 			test: /\.(svg|png|gif|jpg)$/,
-			exclude: /fonts/,
 			loader: 'file-loader',
 			options: {
 				name: '[name].[ext]'
@@ -47,7 +46,7 @@ module.exports = {
 	  },
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: 'compomemts/pug_comp/index.pug'
+			template: 'src/pages/check_page.pug'
 		}),
 		new CssMinimizerWebpackPligin(),
 		new MiniCssExtractPlugin(),
