@@ -46,7 +46,7 @@ module.exports = {
 	  },
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: 'src/pages/check_page.pug'
+			template: 'src/pages/landing_page.pug'
 		}),
 		new CssMinimizerWebpackPligin(),
 		new MiniCssExtractPlugin(),
