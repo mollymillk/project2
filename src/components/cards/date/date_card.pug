@@ -15,10 +15,13 @@ container.date_card
                 .guests_input
                     label.guests_form_label(for="enter") ГОСТИ
                     input#guests(type="list", name="")
-                    button.date_card_button(@click.prevent="onClick")
-                        if type == "selecting_room"
-                            p ПОДОБРАТЬ НОМЕР
-                        else if type == "booking_room"
-                            p ЗАБРОНИРОВАТЬ
-                        slot
+                    block
+    mixin button(type)
+        button.date_card_button(@click.prevent="onClick")
+            if type == "selecting_room"
+                p ПОДОБРАТЬ НОМЕР
+            else if type == "booking_room"
+                p ЗАБРОНИРОВАТЬ
+            slot
     +date_card_form("selecting_room")
+        +button("selecting_room")

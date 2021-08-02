@@ -2,6 +2,16 @@
     font-family: 'Montserrat' sans-serif;
     font-weight: bold;
 }
+@mixin checkout_room_cost_txt_style {
+    font-family: 'Montserrat' sans-serif;
+    color: #1F2041;
+    opacity: 75%;
+    font-size: 14px;
+}
+.checkout_card {
+    max-width: 380px;
+    height: 511px;
+}
 .checkout_number_price {
     >.checkout_room_info {
         display: inline-block;
@@ -39,4 +49,29 @@
 .time_of_booking {
     font-size: 12px;
     font-weight: normal;
+}
+.checkout_room_cost {
+    width: 319px
+}
+.checkout_description {
+    @include checkout_room_cost_txt_style;
+    display: inline-block;
+}
+.checkout_cost {
+    @include checkout_room_cost_txt_style;
+    float: right;
+    display: inline-block;
+}
+.total_cost {
+    @include checkout_txt_style;
+    font-size: 19px;
+    color: #1F2041;
+    display: inline-block;
+}
+.amount_total_cost {
+    @include checkout_txt_style;
+    font-size: 19px;
+    color: #1F2041;
+    float: right;
+    display: inline-block;
 }

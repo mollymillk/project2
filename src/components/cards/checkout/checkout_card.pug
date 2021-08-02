@@ -8,3 +8,17 @@ container.checkout_card
       p.checkout_price 9 990₽
       p.time_of_booking в сутки
   +date_card_form("booking_room")
+  .checkout_room_cost
+    .cost_of_booking_time 
+      p.checkout_description 9 990₽ х 4 суток
+      p.checkout_cost 39 960₽
+    .service_fee 
+      p.checkout_description Сбор за услуги: скидка 2 179₽
+      p.checkout_cost 0₽
+    .additional_services
+      p.checkout_description Сбор за дополнительные услуги
+      p.checkout_cost 300₽
+    .checkout_total_cost 
+      p.total_cost Итого
+      p.amount_total_cost 38 081₽
+  +button("booking_room")
