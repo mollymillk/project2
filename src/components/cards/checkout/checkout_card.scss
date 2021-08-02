@@ -1,0 +1,42 @@
+@mixin checkout_txt_style {
+    font-family: 'Montserrat' sans-serif;
+    font-weight: bold;
+}
+.checkout_number_price {
+    >.checkout_room_info {
+        display: inline-block;
+    >p {
+        @include checkout_txt_style();
+        display: inline-block;
+    }
+}
+    >.checkout_room_price{
+        display: inline-block;
+        padding-left: 110px;
+        >p {
+            @include checkout_txt_style();
+            display: inline-block;
+            opacity: 50%;
+        }
+    }
+}
+.number_symbol {
+    font-size: 14px;
+    color: #1F2041;
+}
+.number_of_room {
+    font-size: 24px;
+    color: #1F2041;
+}
+.room_type {
+    color: #BC9CFF;
+    font-size: 12px;
+}
+.checkout_price{
+    font-size: 14px;
+    color: #1F2041;
+}
+.time_of_booking {
+    font-size: 12px;
+    font-weight: normal;
+}

@@ -2,18 +2,23 @@ container.date_card
     .date_card_txt
         p Найдем номера под 
         p ваши пожелания
-    .date_card_form 
-        form.date_form(action="")
-            .date_input
-                .enter_date_input 
-                    label.date_form_label(for="enter") ПРИБЫТИЕ
-                    input#enter(type="date", name="")
-                .output_date_input
-                    label.date_form_label(for="outgo") ВЫЕЗД
-                    input#outgo(type="date", name="")
-            .guests_input
-                label.guests_form_label(for="enter") ГОСТИ
-                input#guests(type="list", name="")
-                button.date_card_button(@click.prevent="onClick")
-                    p ПОДОБРАТЬ НОМЕР
-                    slot
+    mixin date_card_form(type)
+        .date_card_form 
+            form.date_form(action="")
+                .date_input
+                    .enter_date_input 
+                        label.date_form_label(for="enter") ПРИБЫТИЕ
+                        input#enter(type="date", name="")
+                    .output_date_input
+                        label.date_form_label(for="outgo") ВЫЕЗД
+                        input#outgo(type="date", name="")
+                .guests_input
+                    label.guests_form_label(for="enter") ГОСТИ
+                    input#guests(type="list", name="")
+                    button.date_card_button(@click.prevent="onClick")
+                        if type == "selecting_room"
+                            p ПОДОБРАТЬ НОМЕР
+                        else if type == "booking_room"
+                            p ЗАБРОНИРОВАТЬ
+                        slot
+    +date_card_form("selecting_room")
