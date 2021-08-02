@@ -3,16 +3,17 @@ container.date_card
         p Найдем номера под 
         p ваши пожелания
     .date_card_form 
-        form(action="")
-            .enter_date_input 
-                label.date_form_label(for="enter") ПРИБЫТИЕ
-                input#enter(type="date", name="")
-            .output_date_input
-                label.date_form_label(for="outgo") ВЫЕЗД
-                input#outgo(type="date", name="")
-    .guests_form
-        label.guests_form_label(for="enter") ГОСТИ
-        input#guests(type="list", name="")
-        button.date_card_button(@click.prevent="onClick")
-            p ПОДОБРАТЬ НОМЕР
-            slot
+        form.date_form(action="")
+            .date_input
+                .enter_date_input 
+                    label.date_form_label(for="enter") ПРИБЫТИЕ
+                    input#enter(type="date", name="")
+                .output_date_input
+                    label.date_form_label(for="outgo") ВЫЕЗД
+                    input#outgo(type="date", name="")
+            .guests_input
+                label.guests_form_label(for="enter") ГОСТИ
+                input#guests(type="list", name="")
+                button.date_card_button(@click.prevent="onClick")
+                    p ПОДОБРАТЬ НОМЕР
+                    slot
