@@ -1,0 +1,7 @@
+mixin date_dropdown (type)
+  .enter_date_input 
+    label.date_form_label(for="enter") ПРИБЫТИЕ
+    input#enter(class='datepicker-here' type="text",data-multiple-dates="3"data-multiple-dates-separator=", ")
+  .output_date_input
+    label.date_form_label(for="outgo") ВЫЕЗД
+    input#outgo(class='datepicker-here' type="text", name="")

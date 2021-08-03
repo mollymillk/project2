@@ -53,14 +53,18 @@
 .checkout_room_cost {
     width: 319px
 }
+.cost_of_booking_time, .service_fee, .additional_services, .checkout_total_cost {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .checkout_description {
     @include checkout_room_cost_txt_style;
     display: inline-block;
 }
 .checkout_cost {
     @include checkout_room_cost_txt_style;
-    float: right;
-    display: inline-block;
+    
 }
 .total_cost {
     @include checkout_txt_style;
@@ -72,6 +76,4 @@
     @include checkout_txt_style;
     font-size: 19px;
     color: #1F2041;
-    float: right;
-    display: inline-block;
 }
