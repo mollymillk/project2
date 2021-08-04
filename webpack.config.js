@@ -1,5 +1,5 @@
 const path = require('path');
-var webpack = require('webpack');
+var webpack = require('webpack')
 const CssMinimizerWebpackPligin = require('css-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -45,17 +45,7 @@ module.exports = {
 			options: {
 				pretty: true
 				}
-			},
-			{
-				test: /jquery.+\.js$/,
-				use: [{
-					loader: 'expose-loader',
-					options: 'jQuery'
-				},{
-					loader: 'expose-loader',
-					options: '$'
-				}]
-			  }
+			}
 		]
 	  },
 	plugins: [
@@ -65,9 +55,8 @@ module.exports = {
 		new CssMinimizerWebpackPligin(),
 		new MiniCssExtractPlugin(),
 		new webpack.ProvidePlugin({
-			identifier: ['module1', 'property1'],
 			$: 'jquery',
-			jQuery: 'jquery',
+			jQuery: 'jquery'
 		  })
 	],
 	optimization: {
