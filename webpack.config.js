@@ -50,14 +50,21 @@ module.exports = {
 	  },
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: 'src/pages/landing_page.pug'
+			filename: "landing_page.html",
+			template: 'src/pages/landing_page.pug',
+			chuncks: ["landing_page"]
+		}),
+		new HtmlWebpackPlugin({
+			filename: "ui.html",
+			template: 'src/pages/ui.pug',
+			chuncks: ["ui"]
 		}),
 		new CssMinimizerWebpackPligin(),
 		new MiniCssExtractPlugin(),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery'
-		  })
+		  }),
 	],
 	optimization: {
 		minimize: true,
