@@ -1,0 +1,20 @@
+@import "../txt_field/txt_field.scss";
+.date_dropdown_label_input {
+    display: flex;
+    flex-direction: row
+}
+.date_dropdown_input {
+    @include label_input_style;
+}
+.date_form_label {
+    @include input_text_style();
+    font-weight: bold;
+    font-size: 12px;
+}
+.date_dropdown_input {
+    @include input_style;
+    width: 150px;
+}
+.output_date_dropdown {
+    margin-left: 29px;
+}
