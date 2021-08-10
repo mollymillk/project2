@@ -1,12 +1,12 @@
 @import "../txt_field/txt_field.scss";
 
-.dropdown_label_input  {
+.masked_txt_field_input_label {
     @include label_input_style;
 }
-.dropdown_input {
+.masked_txt_field_input {
     @include input_style;
 }
-.dropdown_label {
+.masked_txt_field_label {
     @include input_text_style();
     font-weight: bold;
     font-size: 12px;

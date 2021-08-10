@@ -1,8 +1,5 @@
-.txt_field_input_label {
-    display: flex;
-    flex-direction: column;
-}
-.txt_field_input {
+@mixin input_style {
+    margin-top: 5px;
     width: 320px;
     height: 44px;
     border-radius: 4px;
@@ -10,12 +7,31 @@
     border-color: #1F2041;
     opacity: 25%;
 }
-.txt_field_input:hover {
-    opacity: 50%;
+@mixin label_input_style {
+    display: flex;
+    flex-direction: column;
 }
-.txt_field_label{
+@mixin input_text_style {
     font-family: 'Montserrat Bold' sans-serif;
     color: #1F2041;
+}
+.txt_field_input_label {
+    @include label_input_style()
+}
+.txt_field_input {
+   @include input_style
+}
+.txt_field_input:hover {
+    color: #1F2041;
+    opacity: 50%;
+}
+
+.txt_field_label{
+    @include input_text_style();
     font-weight: bold;
     font-size: 12px;
 }
+.txt_field_input::placeholder {
+    @include input_text_style();
+    opacity: 50%;
+  }

@@ -8,3 +8,7 @@ html(lang="en")
     body 
         include ../components/form_elements/txt_field/txt_field.pug
         +txt_field("TEXT FIELD", "Email")
+        include ../components/form_elements/dropdown/dropdown.pug
+        +dropdown("DROPDOWN", "Сколько гостей")
+        include ../components/form_elements/masked_text_field/masked_text_field.pug
+        +masked_txt_field("MASKED TEXT FIELD", "ДД. ММ. ГГ.")
