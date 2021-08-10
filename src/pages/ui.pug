@@ -5,12 +5,19 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
+        style 
+            include ../../bower_components/air-datepicker/dist/css/datepicker.min.css
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+        script(src='../../bower_components/air-datepicker/dist/js/datepicker.min.js')
     body 
-        include ../components/form_elements/txt_field/txt_field.pug
-        +txt_field("TEXT FIELD", "Email")
-        include ../components/form_elements/dropdown/dropdown.pug
-        +dropdown("DROPDOWN", "Сколько гостей")
-        include ../components/form_elements/masked_text_field/masked_text_field.pug
-        +masked_txt_field("MASKED TEXT FIELD", "ДД. ММ. ГГ.")
-        include ../components/form_elements/date_dropdown/date_dropdown.pug
-        +date_dropdown("DATE DROPDOWN", "DATE DROPDOWN")
+        form(action="") 
+            include ../components/form_elements/txt_field/txt_field.pug
+            +txt_field("TEXT FIELD", "Email")
+            include ../components/form_elements/dropdown/dropdown.pug
+            +dropdown("DROPDOWN", "Сколько гостей")
+            include ../components/form_elements/masked_text_field/masked_text_field.pug
+            +masked_txt_field("MASKED TEXT FIELD", "ДД. ММ. ГГ.")
+            include ../components/form_elements/date_dropdown/date_dropdown.pug
+            +date_dropdown("DATE DROPDOWN", "DATE DROPDOWN")
+            include ../components/form_elements/buttons/buttons.pug
+            +button("CLICK ME", "check")
