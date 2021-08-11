@@ -1,0 +1,22 @@
+.datepicker {
+    height: 369px !important;
+    width: 320px !important;
+}
+.datepicker--nav-title {
+    font-size: 19px;
+    font-weight: bold;
+}
+.datepicker--day-name {
+    color: #BC9CFF;
+    font-size: 12px;
+    font-weight: bold;
+}
+.datepicker--cell-day {
+    font-family: 'Montsserat' sans serif !important;
+    font-size: 12px;
+    color: #1F2041;
+    opacity: 50%;
+    > .-other-month- {
+        opacity: 25%;
+    }
+}
