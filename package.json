@@ -1,7 +1,6 @@
 {
   "name": "project2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --open",
@@ -29,9 +28,20 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "jquery": "^3.6.0",
     "node-sass": "^6.0.1",
     "postcss-preset-env": "^6.7.0",
+    "pug": "^3.0.2",
     "pug-loader": "^2.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mollymillk/project2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mollymillk/project2/issues"
+  },
+  "homepage": "https://github.com/mollymillk/project2#readme",
+  "description": ""
 }

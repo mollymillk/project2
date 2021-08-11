@@ -15,4 +15,4 @@ import $ from 'jquery';
 global.jQuery = $;
 global.$ = $;
 
-import "./bower_components/air-datepicker/dist/js/datepicker.min.js"
+import "./node_modules/air-datepicker/dist/js/datepicker.min.js"
