@@ -26,7 +26,8 @@ module.exports = {
 			test: /\.(svg|png|gif|jpg)$/,
 			loader: 'file-loader',
 			options: {
-				name: '[name].[ext]'
+				name: '[name].[ext]',
+				outputPath: 'img'
 			}
 		  },
 		  {
@@ -45,6 +46,10 @@ module.exports = {
 			options: {
 				pretty: true
 				}
+			},
+			{
+				test: /\.svg$/,
+				loader: 'svg-inline-loader?classPrefix'
 			}
 		]
 	  },

@@ -1,3 +1,6 @@
+body {
+    background-color: black;
+}
 @mixin button {
     text-align: center;
     height: 44px; 
@@ -21,6 +24,11 @@
     @include button();
     @include bg_button();
     width: 320px;
+    > .arrow {
+        float: right;
+        width: 18px;
+        height: 18px;
+    }
 }
 .bg_button {
     @include button();
@@ -35,5 +43,17 @@
     background:#ffffff;
     width: 99px;
     color: #BC9CFF;
-    border-color: -internal-light-dark(red, blue);
+    border:3px solid transparent;
+    border-radius:22px;
+    border-width: 2px;
+    background:
+        url(http://hexcolor16.com/ffffff-200x200.png) padding-box fixed,
+        linear-gradient(rgba(188, 156, 255, 1), rgba(139, 164, 249, 1)) border-box;
+}
+.no_bg_button:hover {
+    
+    background:
+        url(http://hexcolor16.com/ffffff-200x200.png) padding-box fixed,
+        linear-gradient(rgba(188, 156, 255, 0.5), rgba(139, 164, 249, 0.5)) border-box;
+        
 }
