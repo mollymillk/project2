@@ -1,8 +1,3 @@
-.selected {
-    background-color: green;
-    background-color: #000;
-    border-color: lightcoral;
-}
 .checkbox {
     display: flex;
     flex-direction: row;
@@ -10,19 +5,29 @@
     justify-content: center;
 }
 .checkbox_input {
-    border-width: 1px;
+    display: none;
+}
+.checkbox_label {
+    padding-left: 10px;
+}
+.checkbox_label::before {
+    content: '';
+    display: inline-block;
     width: 20px;
     height: 20px;
-    margin: 0;
-}
-.checkbox_input:not(:checked){
-    border-color: #1f2041;
+    border: 3px solid #1f2041;;
+    border-radius: 3px;
+    border-width: 1px;
     opacity: 25%;
 }
-.checkbox_input[checked="checked"] {
-    background-color: #000;
-    border-color: lightcoral;
+.checkbox_input:checked  + .checkbox_label::before {
+    content: '';
+    border-color: #BC9CFF;
+    //background-image: url(src/components/form_elements/checkbox/img/check_mark.svg);
+    // background-size: 100%;
+    // background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0MjYuNjY3IDQyNi42NjciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQyNi42NjcgNDI2LjY2NzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxwYXRoIHN0eWxlPSJmaWxsOiM2QUMyNTk7IiBkPSJNMjEzLjMzMywwQzk1LjUxOCwwLDAsOTUuNTE0LDAsMjEzLjMzM3M5NS41MTgsMjEzLjMzMywyMTMuMzMzLDIxMy4zMzMgIGMxMTcuODI4LDAsMjEzLjMzMy05NS41MTQsMjEzLjMzMy0yMTMuMzMzUzMzMS4xNTcsMCwyMTMuMzMzLDB6IE0xNzQuMTk5LDMyMi45MThsLTkzLjkzNS05My45MzFsMzEuMzA5LTMxLjMwOWw2Mi42MjYsNjIuNjIyICBsMTQwLjg5NC0xNDAuODk4bDMxLjMwOSwzMS4zMDlMMTc0LjE5OSwzMjIuOTE4eiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K)
 }
+
 .checkbox_label {
     font-family: 'Montserrat' sans-serif;
     font-size: 14px;
