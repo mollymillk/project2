@@ -2,8 +2,3 @@
 mixin button(button_text, type)
         button.button(class = type + "_button")(@click.prevent="onClick")
             p=button_text
-            if type == "full"
-                svg
-                    use(xlink:href='../components/form_elements/buttons/img/arrow.svg')
-            else 
-                p hey

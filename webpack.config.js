@@ -46,10 +46,6 @@ module.exports = {
 			options: {
 				pretty: true
 				}
-			},
-			{
-				test: /\.svg$/,
-				loader: 'svg-inline-loader?classPrefix'
 			}
 		]
 	  },

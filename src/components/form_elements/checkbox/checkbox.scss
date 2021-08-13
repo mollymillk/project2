@@ -1,0 +1,33 @@
+.green {
+    background-color: green;
+    background-color: #000;
+    border-color: lightcoral;
+}
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.checkbox_input {
+    border-width: 1px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+.checkbox_input:not(:checked){
+    border-color: #1f2041;
+    opacity: 25%;
+}
+.checkbox_input[checked="checked"] {
+    background-color: #000;
+    border-color: lightcoral;
+}
+.checkbox_label {
+    font-family: 'Montserrat' sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    border-color: #1f2041;
+    opacity: 50%;
+    margin-left: 10px;
+}
