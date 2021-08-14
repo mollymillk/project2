@@ -23,24 +23,30 @@ module.exports = {
 			use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
 		  },
 		  {
-			test: /\.(svg|png|gif|jpg)$/,
-			loader: 'file-loader',
-			options: {
+			test: /\.svg$/,
+			loader: 'svg-inline-loader'
+		},
+		{
+			test: /\.(png|jpg|svg|gif)$/,
+			use: { 
+			loader: "file-loader", 
+			options:{
 				name: '[name].[ext]',
-				outputPath: 'img'
+				outputPath : '/images/'
 			}
-		  },
+		}
+		},
 		  {
-			test: /\.(ttf|eot|woff|svg|woff2)$/,
-			use: {
-			  loader: "file-loader",
-			  options: {
-				name: '[name].[ext]',
-				outputPath: 'fonts/'
-			  }
+		  test: /\.(ttf|eot|woff|svg|woff2)$/,
+		  use: {
+		  loader: "file-loader",
+		  options: {
+			name: '[name].[ext]',
+			outputPath: 'fonts/'
+		  		}
 			}
 		  },
-		  	{
+			{
 			test: /\.pug$/,
 			loader: 'pug-loader',
 			options: {
