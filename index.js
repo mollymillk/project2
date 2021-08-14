@@ -8,9 +8,12 @@ import "./src/components/form_elements/masked_text_field/masked_text_field.scss"
 import "./src/components/form_elements/date_dropdown/date_dropdown.scss";
 import "./src/components/form_elements/date_dropdown/calendar.scss";
 import "./src/components/form_elements/buttons/buttons.scss";
-// import "./src/components/form_elements/date_dropdown/calendar.js";
+//import "./src/components/form_elements/date_dropdown/calendar.js";
 import "./src/components/form_elements/checkbox/checkbox.scss";
 import "./src/components/form_elements/checkbox/checkbox.js";
+
+import "./src/components/form_elements/checkbox/img/check_mark.svg";
+
 
 
 
@@ -23,5 +26,3 @@ global.jQuery = $;
 global.$ = $;
 
 import "./node_modules/air-datepicker/dist/js/datepicker.min.js"
-
-// import img from './src/components/form_elements/checkbox/img/check_mark.svg'

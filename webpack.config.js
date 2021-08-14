@@ -3,7 +3,8 @@ var webpack = require('webpack')
 const CssMinimizerWebpackPligin = require('css-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 
  
 module.exports = {
@@ -14,26 +15,28 @@ module.exports = {
 		filename: 'scripts.js',
 	},
 	devServer: {
-		contentBase: './dist',
+		publicPath: 'http://localhost:8080/',
 	},
+	resolve: {
+		alias: {
+		'a': path.join(__dirname, 'src/')
+		}
+	  },
 	module: {
 		rules: [
 		  {
 			test: /\.(scss|css)$/,
 			use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
 		  },
-		  {
-			test: /\.svg$/,
-			loader: 'svg-inline-loader'
-		},
 		{
-			test: /\.(png|jpg|svg|gif)$/,
+			test: /\.(png|jpg|gif|svg)$/,
 			use: { 
 			loader: "file-loader", 
-			options:{
+			options: {
 				name: '[name].[ext]',
-				outputPath : '/images/'
-			}
+				outputPath: 'img/', 
+				publicPath: '/img/'
+		}
 		}
 		},
 		  {
@@ -66,6 +69,7 @@ module.exports = {
 			template: 'src/pages/ui.pug',
 			chuncks: ["ui"]
 		}),
+		new HtmlWebpackInlineSVGPlugin(),
 		new CssMinimizerWebpackPligin(),
 		new MiniCssExtractPlugin(),
 		new webpack.ProvidePlugin({
