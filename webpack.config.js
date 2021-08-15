@@ -1,7 +1,7 @@
 const path = require('path');
 var webpack = require('webpack')
 const CssMinimizerWebpackPligin = require('css-minimizer-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
@@ -32,11 +32,6 @@ module.exports = {
 			test: /\.(png|jpg|gif|svg)$/,
 			use: { 
 			loader: "file-loader", 
-			options: {
-				name: '[name].[ext]',
-				outputPath: 'img/', 
-				publicPath: '/img/'
-		}
 		}
 		},
 		  {
@@ -75,6 +70,11 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery'
+		  }),
+		  new CopyPlugin({
+			patterns: [
+			  { from: "src/components/form_elements/checkbox/img", to: "img/" }
+			],
 		  }),
 	],
 	optimization: {
