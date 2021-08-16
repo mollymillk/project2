@@ -5,6 +5,9 @@ const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const config = { test: /\.svg$/, type: "asset" };
 
  
 module.exports = {
@@ -26,23 +29,19 @@ module.exports = {
 		rules: [
 		  {
 			test: /\.(scss|css)$/,
-			use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
-		  },
+			use: [MiniCssExtractPlugin.loader,
+				'css-loader',
+				'postcss-loader', 
+				'sass-loader',]	
+			},
+			{
+			test: /\.svg((\?.*)?|$)/,
+        	loader: 'svg-url-loader'
+ },
 		{
-			test: /\.(png|jpg|gif|svg)$/,
-			use: { 
-			loader: "file-loader", 
-		}
-		},
-		  {
 		  test: /\.(ttf|eot|woff|svg|woff2)$/,
 		  use: {
-		  loader: "file-loader",
-		  options: {
-			name: '[name].[ext]',
-			outputPath: 'fonts/'
-		  		}
-			}
+		  loader: "file-loader"}
 		  },
 			{
 			test: /\.pug$/,
@@ -67,15 +66,11 @@ module.exports = {
 		new HtmlWebpackInlineSVGPlugin(),
 		new CssMinimizerWebpackPligin(),
 		new MiniCssExtractPlugin(),
+		new CleanWebpackPlugin(),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery'
-		  }),
-		  new CopyPlugin({
-			patterns: [
-			  { from: "src/components/form_elements/checkbox/img", to: "img/" }
-			],
-		  }),
+		  })
 	],
 	optimization: {
 		minimize: true,

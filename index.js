@@ -12,7 +12,8 @@ import "./src/components/form_elements/buttons/buttons.scss";
 import "./src/components/form_elements/checkbox/checkbox.scss";
 import "./src/components/form_elements/checkbox/checkbox.js";
 
-//import "./src/components/form_elements/checkbox/img/check_mark.svg";
+import "./src/components/form_elements/checkbox/img/check_mark.svg";
+
 
 
 
