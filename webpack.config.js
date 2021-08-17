@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const config = { test: /\.svg$/, type: "asset" };
+const SVGSpriteSheetPlugin = require('webpack-sass-svg');
 
  
 module.exports = {
@@ -31,13 +31,25 @@ module.exports = {
 			test: /\.(scss|css)$/,
 			use: [MiniCssExtractPlugin.loader,
 				'css-loader',
-				'postcss-loader', 
-				'sass-loader',]	
+				'postcss-loader',
+				'resolve-url-loader',
+				'sass-loader'
+				]	
 			},
 			{
 			test: /\.svg((\?.*)?|$)/,
-        	loader: 'svg-url-loader'
+			use: {
+				loader: "svg-url-loader",
+				options: {} }
  },
+ {
+	test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+	exclude: /node_modules/,
+	loader: 'url-loader',
+	options: {
+	  limit: 10000,
+	  name: '[hash]-[name].[ext]',
+	},},
 		{
 		  test: /\.(ttf|eot|woff|svg|woff2)$/,
 		  use: {
@@ -70,7 +82,8 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery'
-		  })
+		  }),
+		new SVGSpriteSheetPlugin( '___PATH_TO_COMPILE_DIR___' )
 	],
 	optimization: {
 		minimize: true,
