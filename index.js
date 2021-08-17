@@ -12,7 +12,7 @@ import "./src/components/form_elements/buttons/buttons.scss";
 import "./src/components/form_elements/checkbox/checkbox.scss";
 import "./src/components/form_elements/checkbox/checkbox.js";
 
-
+img.src=require("svg-url-loader!./src/components/form_elements/checkbox/check_mark.svg");
 
 
 

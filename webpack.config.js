@@ -8,6 +8,7 @@ const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const SVGSpriteSheetPlugin = require('webpack-sass-svg');
+const miniSVGDataURI = require('mini-svg-data-uri');
 
  
 module.exports = {
@@ -29,29 +30,27 @@ module.exports = {
 		rules: [
 		  {
 			test: /\.(scss|css)$/,
-			use: [MiniCssExtractPlugin.loader,
+			use: [
+				{loader:MiniCssExtractPlugin.loader,
+				options: {publicPath: ""}},
 				'css-loader',
 				'postcss-loader',
-				'resolve-url-loader',
 				'sass-loader'
 				]	
 			},
 			{
-			test: /\.svg((\?.*)?|$)/,
-			use: {
-				loader: "svg-url-loader",
-				options: {} }
- },
- {
-	test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-	exclude: /node_modules/,
-	loader: 'url-loader',
-	options: {
-	  limit: 10000,
-	  name: '[hash]-[name].[ext]',
-	},},
+				test: /\.svg$/,
+				type: 'asset/inline',
+		       generator: {
+		         dataUrl(content) {
+		           content = content.toString();
+		           return miniSVGDataURI(content);
+		         }
+	       },
+				use: 'svgo-loader'
+			  },
 		{
-		  test: /\.(ttf|eot|woff|svg|woff2)$/,
+		  test: /\.(ttf|eot|woff|woff2)$/,
 		  use: {
 		  loader: "file-loader"}
 		  },
