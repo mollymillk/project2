@@ -31,9 +31,6 @@ module.exports = {
 			{
 				test: /\.svg$/,
 				type: 'asset/inline',
-				include: [
-					path.resolve(__dirname, "src/components/form_elements/checkbox/")
-				  ],
 				exclude: [ path.resolve(__dirname, "src/asserts/fonts")],
 		       generator: {
 		         dataUrl(content) {

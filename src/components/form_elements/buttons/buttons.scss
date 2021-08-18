@@ -7,6 +7,8 @@
         font-size: 12px;
         font-weight: 700;
         margin: 0;
+        max-width: 132px;
+        position: relative;
     } 
 }
 @mixin bg_button {
@@ -21,11 +23,22 @@
     @include button();
     @include bg_button();
     width: 320px;
-    > .arrow {
-        float: right;
-        width: 18px;
-        height: 18px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    > p {
+        padding-top: 5%;
+        padding-left: 30%;
     }
+}
+.arrow {
+    z-index: 2;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    padding-left: 120px;
+    padding-bottom: 10px;
+    float: left;
 }
 .bg_button {
     @include button();

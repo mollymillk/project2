@@ -1,5 +1,5 @@
 mixin button(button_text, type)
         button.button(class = type + "_button")(@click.prevent="onClick")
-            p=button_text
-        if type==full
-            img(src="", alt="", srcset="")
+            p.button_text=button_text
+            if type == "full"
+                img.arrow(src=require("/src/components/form_elements/buttons/arrow.svg"))
