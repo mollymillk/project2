@@ -12,7 +12,7 @@ const miniSVGDataURI = require('mini-svg-data-uri');
 
  
 module.exports = {
-	mode: 'development',
+	mode:'development',
 	entry: './index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -28,19 +28,13 @@ module.exports = {
 	  },
 	module: {
 		rules: [
-		  {
-			test: /\.(scss|css)$/,
-			use: [
-				{loader:MiniCssExtractPlugin.loader,
-				options: {publicPath: ""}},
-				'css-loader',
-				'postcss-loader',
-				'sass-loader'
-				]	
-			},
 			{
 				test: /\.svg$/,
 				type: 'asset/inline',
+				include: [
+					path.resolve(__dirname, "src/components/form_elements/checkbox/")
+				  ],
+				exclude: [ path.resolve(__dirname, "src/asserts/fonts")],
 		       generator: {
 		         dataUrl(content) {
 		           content = content.toString();
@@ -55,12 +49,22 @@ module.exports = {
 		  loader: "file-loader"}
 		  },
 			{
-			test: /\.pug$/,
-			loader: 'pug-loader',
-			options: {
-				pretty: true
-				}
-			}
+				test: /\.(scss|css)$/,
+				use: [{loader:MiniCssExtractPlugin.loader,
+					options: {publicPath: ""}},
+					'css-loader',
+					'postcss-loader',
+					'sass-loader'
+					]	
+				},
+			{
+				test: /\.pug$/,
+				loader: 'pug-loader',
+				options: {
+					pretty: true
+					}
+				},
+			
 		]
 	  },
 	plugins: [

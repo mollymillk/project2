@@ -1,0 +1,38 @@
+@mixin label {
+    font-family: 'Montserrat' sans-serif;
+    font-size: 14px;
+    border-color: #1f2041;
+    opacity: 50%;
+}
+.radio_input {
+    display: none;
+}
+.radio_label {
+    @include label;
+    line-height: 24px;
+}
+.radio_input:checked + .radio_label {
+    opacity: 75%;
+}
+.radio_label::before {
+    content: '';
+    display: inline-flex;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 9.74px;
+
+}
+.radio_input:checked  + .radio_label::before {
+    content: '';
+    border: 1px solid #bc9cff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 9.74px;
+    background-image: url("~checked_circle.svg");
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
