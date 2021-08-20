@@ -13,4 +13,10 @@ html(lang="ru")
         script(src='../../node_modules/air-datepicker/dist/js/datepicker.min.js')
     body 
         include ../components/cards/date/date_card
+        include ../components/form_elements/date_dropdown/date_dropdown         
+        +date_dropdown("ВЬЕЗД","ВЫЕЗД")
+        include ../components/form_elements/buttons/buttons        
+        +button("ПОДОБРАТЬ НОМЕР", "full")
+
         include ../components/cards/checkout/checkout_card
+        include ../components/form_elements/date_dropdown/date_dropdown

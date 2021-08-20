@@ -27,18 +27,19 @@
     position: relative;
     z-index: 1;
     > p {
-        padding-top: 5%;
-        padding-left: 30%;
+        display: inline-block;
     }
+}
+.full_button:hover {
+    opacity: 0.5;
 }
 .arrow {
     z-index: 2;
     position: absolute;
+    display: inline-block;
     width: 18px;
     height: 18px;
-    padding-left: 120px;
-    padding-bottom: 10px;
-    float: left;
+    padding-left: 58px / 320px * 100%;
 }
 .bg_button {
     @include button();
