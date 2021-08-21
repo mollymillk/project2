@@ -1,52 +1,30 @@
+// var $start = $('#enter_calendar'),
+//     $end = $('#outgo_calendar');
 
-// jQuery(function($) {
-//     $('#enter_calendar').datepicker();
-// });
-$(".wrap").each(function () {
-    const item = $(this);
-    const dateFrom = item.find(".date-from");
-    const dateTo = item.find(".date-to");
-  
-    item.find(".datepicker-multi").datepicker({
-      clearButton: true,
-      onSelect: (date) => {
-        const dates = date.split(" - ");
-        dateFrom.val(dates[0]);
-        dateTo.val(dates[1]);
-      }
-    });
-  
-    // Экземпляр класса
-    const datep = item.find(".datepicker-multi").data("datepicker");
-    
-    // Экземпляр кода календаря
-    const datepEl = datep.$datepicker;
-    // Добавление кнопки
-    const applyButton = $(
-      `<span class='datepicker--button'>Применить</span>`
-    );
-  
-    applyButton.click(() => {
-      if (datep.selectedDates.length < 2) return;
-      datep.hide();
-    });
-  
-    datepEl.find(".datepicker--buttons").append(applyButton);
-    dateTo.click(() => datep.show());
-    dateFrom.click(() => datep.show());
-  
-    // Скрытие на клик вне
-    $(document).mouseup(function (e) {
-      const dep = $(".datepickers-container");
-      const wrap = $(".wrap");
-      if (
-        !dep.is(e.target) &&
-        dep.has(e.target).length === 0 &&
-        !wrap.is(e.target) &&
-        wrap.has(e.target).length === 0
-      ) {
-        datep.hide();
-      }
-    });
-  });
-  
+jQuery(function($){ 
+$('#enter_calendar').datepicker({
+    clearButton: true,
+    todayButton: new Date(),
+    language: {
+      today: "ПРИМЕНИТЬ",
+      clear: "ОЧИСТИТЬ",
+      daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+    },
+    onSelect: function (fd, d, picker) { 
+      $("#enter_calendar").val(fd.split("-")[0]);
+      $("#outgo_calendar").val(fd.split("-")[1]);
+    }
+  //   onSelect: function (fd, date) {
+  //     $end.data('datepicker')
+  //             .update('minDate', date);
+  //     $end.focus();
+  //   }
+  //   })
+  //   $end.datepicker({
+  //     onSelect: function (fd, date) {
+  //         $start.data('datepicker')
+  //                 .update('maxDate', date)
+  //     }
+  // })
+  })
+})
