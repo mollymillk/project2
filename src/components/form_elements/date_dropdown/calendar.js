@@ -1,10 +1,9 @@
-// var $start = $('#enter_calendar'),
-//     $end = $('#outgo_calendar');
 
 jQuery(function($){ 
 $('#enter_calendar').datepicker({
     clearButton: true,
-    todayButton: new Date(),
+    //todayButton: new Date(),
+    minDate: new Date(),
     language: {
       today: "ПРИМЕНИТЬ",
       clear: "ОЧИСТИТЬ",
@@ -13,18 +12,17 @@ $('#enter_calendar').datepicker({
     onSelect: function (fd, d, picker) { 
       $("#enter_calendar").val(fd.split("-")[0]);
       $("#outgo_calendar").val(fd.split("-")[1]);
-    }
-  //   onSelect: function (fd, date) {
-  //     $end.data('datepicker')
-  //             .update('minDate', date);
-  //     $end.focus();
-  //   }
-  //   })
-  //   $end.datepicker({
-  //     onSelect: function (fd, date) {
-  //         $start.data('datepicker')
-  //                 .update('maxDate', date)
-  //     }
-  // })
-  })
+    },
+   
+  onShow: function (dp) {
+       if (dp.$datepicker.find('button').html()===undefined) {
+          dp.$datepicker.append('<button type="button" class="uk-button uk-button-primary uk-button-small uk-width-1-1 uk-margin-small-bottom" ><i class="fas fa-check"></i> Ready</button>');
+          dp.$datepicker.find('button').click(function() {
+             dp.hide();
+          });
+       }
+ },
+ 
 })
+},
+)
