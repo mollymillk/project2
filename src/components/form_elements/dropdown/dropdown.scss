@@ -11,3 +11,57 @@
     font-weight: bold;
     font-size: 12px;
 }
+div.NCS.category {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    padding: 0;
+}
+div.NCS.name {
+    @include input_text_style;
+    font-weight: bold;
+    font-size: 12px;
+}
+div.NCS.parent {
+    width: 320px;
+    height: 159px;
+    border: none;
+    padding: none;
+}
+a.NCS.close {
+    font-family: 'Montserrat Bold' sans-serif;
+    font-size: 12px;
+    color: #bc9cff;
+    text-decoration: none;
+    font-weight: bold;
+}
+div.NCS.buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 0;
+}
+a.NCS.button.minus {
+    height: 30px;
+    width: 30px;
+    background:none;
+    border: 1px solid #1f2041;
+    color: #1f2041;
+    opacity:25%;
+    border-radius: 50%;
+
+}
+a.NCS.button.plus {
+    height: 30px;
+    width: 30px;
+    background:none;
+    border: 1px solid #1f2041;
+    color: #1f2041;
+    opacity: 50%;
+    border-radius: 50%;
+}
+div.NCS.text {
+    height: 15px;
+}
+div.NCS.value {
+    line-height: 15px;
+}

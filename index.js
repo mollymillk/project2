@@ -11,6 +11,7 @@ import "./src/components/form_elements/buttons/buttons.scss";
 import "./src/components/form_elements/date_dropdown/calendar.js";
 import "./src/components/form_elements/checkbox/checkbox.scss";
 import "./src/components/form_elements/radio_button/radio_button.scss";
+import "./src/components/form_elements/dropdown/dropdown"
 
 
 img.src=require("svg-url-loader!./src/components/form_elements/checkbox/check_mark.svg");
@@ -28,3 +29,4 @@ global.jQuery = $;
 global.$ = $;
 
 import "./node_modules/air-datepicker/dist/js/datepicker.min.js"
+import "./src/asserts/dropdownplugin/numbercategoryselector"

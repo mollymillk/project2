@@ -19,7 +19,7 @@ module.exports = {
 		filename: 'scripts.js',
 	},
 	devServer: {
-		publicPath: 'http://localhost:8080/',
+		publicPath: 'http://localhost:8080/'
 	},
 	resolve: {
 		alias: {
@@ -28,6 +28,15 @@ module.exports = {
 	  },
 	module: {
 		rules: [
+			{
+				test: /\.(scss|css)$/,
+				use: [{loader:MiniCssExtractPlugin.loader,
+					options: {publicPath: "dist"}},
+					'css-loader',
+					'postcss-loader',
+					'sass-loader'
+					]	
+				},
 			{
 				test: /\.svg$/,
 				type: 'asset/inline',
@@ -45,15 +54,6 @@ module.exports = {
 		  use: {
 		  loader: "file-loader"}
 		  },
-			{
-				test: /\.(scss|css)$/,
-				use: [{loader:MiniCssExtractPlugin.loader,
-					options: {publicPath: ""}},
-					'css-loader',
-					'postcss-loader',
-					'sass-loader'
-					]	
-				},
 			{
 				test: /\.pug$/,
 				loader: 'pug-loader',
@@ -82,8 +82,7 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery'
-		  }),
-		new SVGSpriteSheetPlugin( '___PATH_TO_COMPILE_DIR___' )
+		  })
 	],
 	optimization: {
 		minimize: true,

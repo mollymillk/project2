@@ -6,10 +6,13 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
         style 
+            include ../asserts/dropdownplugin/numbercategoryselector.css
             include ../../node_modules/air-datepicker/dist/css/datepicker.min.css
         script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
         script(src='../../node_modules/air-datepicker/dist/js/datepicker.min.js')
         script(src="../../dist/scripts.js") 
+        script(src="//code.jquery.com/jquery.min.js")
+        script(src="../../asserts/dropdownplugin/numbercategoryselector.js") 
     body 
         form(action="") 
             include ../components/form_elements/txt_field/txt_field.pug
