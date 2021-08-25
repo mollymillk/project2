@@ -16,6 +16,9 @@ div.NCS.category {
     flex-direction: row;
     border: none;
     padding: 0;
+    // padding-top: 11px;
+    // padding-bottom: 11px;
+    height: 30px
 }
 div.NCS.name {
     @include input_text_style;
