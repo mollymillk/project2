@@ -10,6 +10,9 @@ html(lang="en")
             include ../../node_modules/air-datepicker/dist/css/datepicker.min.css
             include ../asserts/checkbox_plugin/css/canecode_switch.css
         script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+        script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+        crossorigin="anonymous") 
         script(src='../../node_modules/air-datepicker/dist/js/datepicker.min.js')
         script(src="../../dist/scripts.js") 
         script(src="//code.jquery.com/jquery.min.js")
@@ -36,6 +39,6 @@ html(lang="en")
                 +radio_button("woman", "Женщина")
                 +radio_button("male", "Мужчина")
             include ../components/form_elements/toogle/toogle.pug
-            +toogle()
+            +toogle
 
 

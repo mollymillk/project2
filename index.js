@@ -12,6 +12,10 @@ import "./src/components/form_elements/date_dropdown/calendar.js";
 import "./src/components/form_elements/checkbox/checkbox.scss";
 import "./src/components/form_elements/radio_button/radio_button.scss";
 import "./src/components/form_elements/dropdown/dropdown"
+import "./src/components/form_elements/toogle/toogle"
+import "./src/components/form_elements/toogle/toogle.scss"
+
+
 
 
 img.src=require("svg-url-loader!./src/components/form_elements/checkbox/check_mark.svg");
@@ -29,4 +33,4 @@ global.jQuery = $;
 global.$ = $;
 
 import "./node_modules/air-datepicker/dist/js/datepicker.min.js"
-import "./src/asserts/dropdownplugin/numbercategoryselector"
+import "./src/asserts/dropdownplugin/numbercategoryselector.js"

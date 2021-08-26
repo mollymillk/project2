@@ -1,2 +1,6 @@
- mixin toogle()
-    input(type="checkbox" id="example" name="switch")
+mixin toogle
+   input.toogle(type="checkbox", id="default")
+   label.toogle_label(for="default" data-checked="Checked" data-unchecked="Unchecked") 
+   input.toogle(type="checkbox", id="rounded")
+   label.toogle_label(for="rounded" data-checked="Checked" data-unchecked="Unchecked") 
+   
