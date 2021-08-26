@@ -12,8 +12,8 @@ import "./src/components/form_elements/date_dropdown/calendar.js";
 import "./src/components/form_elements/checkbox/checkbox.scss";
 import "./src/components/form_elements/radio_button/radio_button.scss";
 import "./src/components/form_elements/dropdown/dropdown"
-import "./src/components/form_elements/toogle/toogle"
 import "./src/components/form_elements/toogle/toogle.scss"
+import "./src/components/form_elements/like_button/like_button.scss"
 
 
 
