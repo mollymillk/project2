@@ -18,8 +18,14 @@ import "./src/components/form_elements/like_button/like_button.scss"
 
 
 
+
 img.src=require("svg-url-loader!./src/components/form_elements/checkbox/check_mark.svg");
 img.src=require("svg-url-loader!./src/components/form_elements/radio_button/checked_circle.svg");
+
+img.src=require("svg-url-loader!./src/components/form_elements/like_button/icons/like_icon.svg");
+img.src=require("svg-url-loader!./src/components/form_elements/like_button/icons/unlike_icon.svg");
+
+
 //img.src=require("svg-url-loader!./src/components/form_elements/buttons/arrow.svg");
 
 

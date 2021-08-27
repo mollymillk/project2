@@ -4,7 +4,26 @@
     border-radius: 10px;
     border: 1px solid rgba(31, 32, 65, 0.25);
     background: none;
+    background-image: url(~icons/unlike_icon.svg);
+    background-size: 10px 8px;
+    background-repeat: no-repeat;
+    background-position: top 5px left 5px;
+    font-family: 'Montserrat' sans-serif;
+    font-size: 10px;
+    color: rgba(31, 32, 65, 0.25);
+    padding-left: 18px;
+}
+.like_button:hover {
+    border: 1px solid #BC9CFF;
+    background-image: url(~icons/like_icon.svg);
+    background-repeat: no-repeat;
+    background-size: 10px 8px;
+    color: #BC9CFF;
 }
 .like_button:focus {
-    border: 1px solid #BC9CFF
+    border: 1px solid #BC9CFF;
+    background-image: url(~icons/like_icon.svg);
+    background-repeat: no-repeat;
+    background-size: 10px 8px;
+    color: #BC9CFF;
 }

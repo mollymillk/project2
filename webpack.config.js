@@ -31,7 +31,7 @@ module.exports = {
 			{
 				test: /\.(scss|css)$/,
 				use: [{loader:MiniCssExtractPlugin.loader,
-					options: {publicPath: "dist"}},
+					options: {publicPath: ""}},
 					'css-loader',
 					'postcss-loader',
 					'sass-loader'
