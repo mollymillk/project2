@@ -14,6 +14,8 @@ import "./src/components/form_elements/radio_button/radio_button.scss";
 import "./src/components/form_elements/dropdown/dropdown"
 import "./src/components/form_elements/toogle/toogle.scss"
 import "./src/components/form_elements/like_button/like_button.scss"
+import "./src/components/form_elements/rate_button/rate_button.scss"
+
 
 
 
@@ -24,6 +26,11 @@ img.src=require("svg-url-loader!./src/components/form_elements/radio_button/chec
 
 img.src=require("svg-url-loader!./src/components/form_elements/like_button/icons/like_icon.svg");
 img.src=require("svg-url-loader!./src/components/form_elements/like_button/icons/unlike_icon.svg");
+
+img.src=require("svg-url-loader!./src/components/form_elements/rate_button/img/rate_button_star.svg");
+img.src=require("svg-url-loader!./src/components/form_elements/rate_button/img/rate_button_star_unchecked.svg");
+
+
 
 
 //img.src=require("svg-url-loader!./src/components/form_elements/buttons/arrow.svg");
