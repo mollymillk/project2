@@ -17,7 +17,7 @@
     height: 20px;
 
 }
-.rating_input:checked  + .rating_label::before {
+.rating_input:checked  + .rating_label::before, .rating_input:hover  + .rating_label::before, .rating_input:active  + .rating_label::before {
     content: '';
     display: inline-flex;
     background-image: url("~img/rate_button_star.svg");
