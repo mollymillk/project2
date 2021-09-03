@@ -10,11 +10,21 @@
 .date_card {
     width: 380px;
     height: 374px;
-    > .date_card_txt p {
-        @include form_style;
-        font-size: 24px;
-        line-height: 29px;
-    } 
+    > .date_card_txt {
+        padding-bottom: 21px;
+        >p {
+            @include form_style;
+            font-size: 24px;
+            line-height: 29px;
+            margin: 0;
+        } 
+    }
+    > .date_card_button {
+        padding-top: 33px;
+    }
+    > .dropdown_label_input  {
+        padding-top: 22px;
+    }
 }
 .date_card_form {
     padding-top: 21px;
@@ -29,21 +39,5 @@
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-}
-.date_card_button {
-    text-align: center;
-    height: 44px;
-    width: 320px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
-    border: none;
-    margin-top: 30.44px;
-    > p {
-        font-family: 'Montserrat' sans-serif;
-        font-size: 12px;
-        color: #ffffff;
-        font-weight: 700;
-        margin: 0;
-    }
 }
 

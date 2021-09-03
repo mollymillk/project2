@@ -1,7 +1,8 @@
 @import "../txt_field/txt_field.scss";
 .date_dropdown_label_input {
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    gap: 20px
 }
 .date_dropdown_input {
     @include label_input_style;

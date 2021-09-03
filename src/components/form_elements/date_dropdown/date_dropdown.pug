@@ -3,6 +3,7 @@ mixin date_dropdown(enter_label, outgo_label)
     .enter_date_dropdown 
       label.date_form_label(for="enter")= enter_label
       input.date_dropdown_input(type="text" id="enter_calendar" data-range="true" data-multiple-dates-separator=" - ")
+    .outgo_date_dropdown
       label.date_form_label(for="outgo")= outgo_label
       input.date_dropdown_input(type="text", id="outgo_calendar" name="")
   block

@@ -2,6 +2,7 @@
 import"./src/asserts/fonts/fonts.scss";
 import "./src/components/cards/date/date_card.scss";
 import "./src/components/cards/checkout/checkout_card.scss";
+import "./src/components/cards/login/login_card.scss";
 import "./src/components/form_elements/txt_field/txt_field.scss";
 import "./src/components/form_elements/dropdown/dropdown.scss";
 import "./src/components/form_elements/masked_text_field/masked_text_field.scss";
@@ -15,6 +16,7 @@ import "./src/components/form_elements/dropdown/dropdown"
 import "./src/components/form_elements/toogle/toogle.scss"
 import "./src/components/form_elements/like_button/like_button.scss"
 import "./src/components/form_elements/rate_button/rate_button.scss"
+
 
 
 

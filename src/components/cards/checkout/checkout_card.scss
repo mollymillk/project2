@@ -9,8 +9,12 @@
     font-size: 14px;
 }
 .checkout_card {
-    max-width: 380px;
+    width: 380px;
     height: 511px;
+    > .dropdown_label_input {
+        padding-top: 19px;
+        padding-bottom: 20px;
+    }
 }
 .checkout_number_price {
     >.checkout_room_info {
@@ -59,7 +63,6 @@
 }
 .checkout_cost {
     @include checkout_room_cost_txt_style;
-    float: right;
     display: inline-block;
 }
 .total_cost {
@@ -72,6 +75,5 @@
     @include checkout_txt_style;
     font-size: 19px;
     color: #1F2041;
-    float: right;
     display: inline-block;
 }

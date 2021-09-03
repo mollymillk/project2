@@ -1,0 +1,35 @@
+@mixin form_style{
+    font-family: 'Montserrat Bold' sans-serif;
+    color: #1F2041;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.login_card {
+    width: 380px;
+    height: 358px;
+    > p {
+        @include form_style();
+        padding-left: 31px;
+
+    }
+    > form {
+        padding-left: 31px;
+    }
+}
+.login_button {
+    padding-top: 20px;
+}
+.login_card_registration {
+    display: inline-flex;
+    padding-left: 31px;
+    padding-top: 30px;
+    > p {
+        font-family: 'Montserrat' sans-serif;
+        color: #1F2041;
+        font-size: 14px;
+    }
+    > .login_card_button {
+        padding-left: 54px;
+    }
+}

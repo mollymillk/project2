@@ -1,0 +1,15 @@
+container.login_card 
+    p Войти 
+    form(action="") 
+        include ../../form_elements/txt_field/txt_field
+        +txt_field("", "Email")
+        +txt_field("", "Пароль")
+        include ../../form_elements/buttons/buttons
+        .login_button
+            +button("ВОЙТИ", "full")
+    .login_card_registration
+        p Нет аккаунта на Toxin?
+        .login_card_button
+            +button("СОЗДАТЬ", "no_bg")
+
+

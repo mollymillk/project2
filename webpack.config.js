@@ -75,6 +75,11 @@ module.exports = {
 			template: 'src/pages/ui.pug',
 			chuncks: ["ui"]
 		}),
+		new HtmlWebpackPlugin({
+			filename: "cards.html",
+			template: 'src/pages/cards.pug',
+			chuncks: ["cards"]
+		}),
 		new HtmlWebpackInlineSVGPlugin(),
 		new CssMinimizerWebpackPligin(),
 		new MiniCssExtractPlugin(),

@@ -11,6 +11,5 @@ $(function() {
         fade: true,
         useDisplay: true,
         showZero: false,
-
     });
 })
