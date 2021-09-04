@@ -1,4 +1,12 @@
 header
     .logo 
-        img(src="../../../asserts/img/Logo.svg", alt="", srcset="")
+        img(src=require("/src/asserts/img/Logo.svg"))
     menu
+        - var menuItems = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
+            each menuItem in menuItems 
+                a.menu_item(href="http://bbro.jj")= menuItem
+        .header_login_button 
+            include ../../form_elements/buttons/buttons
+            +button("ВОЙТИ", "no_bg")
+        .header_sign_button
+            +button("ЗАРЕГИСТРИРОВАТЬСЯ", "no_bg")

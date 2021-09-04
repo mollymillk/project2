@@ -1,6 +1,28 @@
 header {
     height: 70px;
+    display: inline-flex;
 }
 .logo {
     padding-left: 140px;
+}
+menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 137.5px;
+}
+.header_login_button , .header_sign_button {
+    float: right;
+}
+.menu_item {
+    text-decoration: none;
+    font-family: 'Montserrat' sans-serif;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.5);
+    line-height: 17px;
+}
+.menu_item:hover {
+    font-family: 'Montserrat' sans-serif;
+    font-weight: bold;
+    color: rgba(31, 32, 65, 0.75);
 }
