@@ -19,8 +19,12 @@ module.exports = {
 		filename: 'scripts.js',
 	},
 	devServer: {
-		publicPath: 'http://localhost:8080/'
-	},
+		contentBase: path.join(__dirname, 'dist'),
+		hot: true, //Hot module replacement
+		port: 9000,
+		writeToDisk:true,
+		open: 'chrome' //open in chrome
+	  },
 	resolve: {
 		alias: {
 		'a': path.join(__dirname, 'src/')
@@ -30,12 +34,12 @@ module.exports = {
 		rules: [
 			{
 				test: /\.(scss|css)$/,
-				use: [{loader:MiniCssExtractPlugin.loader,
-					options: {publicPath: ""}},
+				use: [ 
+					'style-loader',
 					'css-loader',
 					'postcss-loader',
 					'sass-loader'
-					]	
+					]
 				},
 			{
 				test: /\.svg$/,
