@@ -21,6 +21,8 @@ import "./src/components/form_elements/rate_button/rate_button.scss"
 
 import "./src/components/headers_footers/authorized_user_header/authorized_user_header.scss"
 
+import "./src/pages/landing_page/landing_page.scss"
+
 
 
 
@@ -35,6 +37,8 @@ img.src=require("svg-url-loader!./src/components/form_elements/like_button/icons
 
 img.src=require("svg-url-loader!./src/components/form_elements/rate_button/img/rate_button_star.svg");
 img.src=require("svg-url-loader!./src/components/form_elements/rate_button/img/rate_button_star_unchecked.svg");
+
+//img.src=require("./src/asserts/img/bg_image.png")
 
 
 

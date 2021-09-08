@@ -25,7 +25,12 @@ module.exports = {
 		hot: true, //Hot module replacement
 		port: 9000,
 		writeToDisk:true,
-		open: 'chrome' //open in chrome
+		open: 'chrome', //open in chrome
+        inline: true,
+        host: "localhost",
+        watchOptions: {
+            poll: true
+        }
 	  },
 	resolve: {
 		alias: {
@@ -57,6 +62,11 @@ module.exports = {
 				use: 'svgo-loader'
 			  },
 			  {
+				test: /\.(png|jpg|gif)$/i,
+				include: path.join(__dirname, "src/asserts/img"),
+					loader: 'file-loader',
+				  },
+			  {
 				test: /\.(ttf|eot|woff|svg|woff2)$/,
 				include: [ path.join(__dirname, "./src/asserts/fonts")],
 				use: {
@@ -81,7 +91,7 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			filename: "landing_page.html",
-			template: 'src/pages/landing_page.pug',
+			template: 'src/pages/landing_page/landing_page.pug',
 			chuncks: ["landing_page"]
 		}),
 		new HtmlWebpackPlugin({

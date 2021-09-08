@@ -1,29 +1,30 @@
-container.checkout_card
-    .checkout_number_price 
-        .checkout_room_info
-            p.number_symbol №
-            p.number_of_room 888
-            p.room_type люкс
-        .checkout_room_price
-            p.checkout_price 9 990₽
-            p.time_of_booking в сутки
-    include ../../form_elements/date_dropdown/date_dropdown         
-    +date_dropdown("ВЬЕЗД","ВЫЕЗД")
-    include ../../form_elements/dropdown/dropdown 
-    +dropdown("ГОСТИ")
-    .checkout_room_cost
-        .cost_of_booking_time 
-            p.checkout_description 9 990₽ х 4 суток
-            p.checkout_cost 39 960₽
-        .service_fee 
-            p.checkout_description Сбор за услуги: скидка 2 179₽
-            p.checkout_cost 0₽
-        .additional_services
-            p.checkout_description Сбор за дополнительные услуги
-            p.checkout_cost 300₽
-        .checkout_total_cost 
-            p.total_cost Итого
-            p.amount_total_cost 38 081₽
-    .checkout_card_button
-        include ../../form_elements/buttons/buttons        
-        +button("ЗАБРОНИРОВАТЬ", "full")
+.checkout_card
+    .checkout_card_items
+        .checkout_number_price 
+            .checkout_room_info
+                p.number_symbol №
+                p.number_of_room 888
+                p.room_type люкс
+            .checkout_room_price
+                p.checkout_price 9 990₽
+                p.time_of_booking в сутки
+        include ../../form_elements/date_dropdown/date_dropdown         
+        +date_dropdown("ВЬЕЗД","ВЫЕЗД")
+        include ../../form_elements/dropdown/dropdown 
+        +dropdown("ГОСТИ")
+        .checkout_room_cost
+            .cost_of_booking_time 
+                p.checkout_description 9 990₽ х 4 суток
+                p.checkout_cost 39 960₽
+            .service_fee 
+                p.checkout_description Сбор за услуги: скидка 2 179₽
+                p.checkout_cost 0₽
+            .additional_services
+                p.checkout_description Сбор за дополнительные услуги
+                p.checkout_cost 300₽
+            .checkout_total_cost 
+                p.total_cost Итого
+                p.amount_total_cost 38 081₽
+        .checkout_card_button
+            include ../../form_elements/buttons/buttons        
+            +button("ЗАБРОНИРОВАТЬ", "full")

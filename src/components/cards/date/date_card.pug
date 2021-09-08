@@ -1,12 +1,13 @@
-container.date_card
-    .date_card_txt
-        p Найдем номера под 
-        p ваши пожелания 
-    include ../../form_elements/date_dropdown/date_dropdown         
-    +date_dropdown("ВЬЕЗД","ВЫЕЗД")
-    include ../../form_elements/dropdown/dropdown 
-    +dropdown("ГОСТИ")
-    .date_card_button
-        include ../../form_elements/buttons/buttons        
-        +button("ПОДОБРАТЬ НОМЕР", "full")
-        
+.date_card
+    .date_card_items
+        .date_card_txt
+            p Найдем номера под 
+            p ваши пожелания 
+        include ../../form_elements/date_dropdown/date_dropdown         
+        +date_dropdown("ВЬЕЗД","ВЫЕЗД")
+        include ../../form_elements/dropdown/dropdown 
+        +dropdown("ГОСТИ")
+        .date_card_button
+            include ../../form_elements/buttons/buttons        
+            +button("ПОДОБРАТЬ НОМЕР", "full")
+            
