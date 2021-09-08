@@ -9,10 +9,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const SVGSpriteSheetPlugin = require('webpack-sass-svg');
 const miniSVGDataURI = require('mini-svg-data-uri');
+const { web } = require('webpack');
 
  
 module.exports = {
 	mode:'development',
+	target: "web",
 	entry: './index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -36,6 +38,7 @@ module.exports = {
 				test: /\.(scss|css)$/,
 				use: [ 
 					'style-loader',
+					MiniCssExtractPlugin.loader,
 					'css-loader',
 					'postcss-loader',
 					'sass-loader'
@@ -53,11 +56,18 @@ module.exports = {
 	       },
 				use: 'svgo-loader'
 			  },
-		{
-		  test: /\.(ttf|eot|woff|woff2)$/,
-		  use: {
-		  loader: "file-loader"}
-		  },
+			  {
+				test: /\.(ttf|eot|woff|svg|woff2)$/,
+				include: [ path.join(__dirname, "./src/asserts/fonts")],
+				use: {
+				  loader: "url-loader",
+				  options: {
+					name: '[name].[ext]',
+					outputPath: 'fonts/',
+					esModule: false
+				  }
+				}
+			  },
 			{
 				test: /\.pug$/,
 				loader: 'pug-loader',
@@ -86,7 +96,9 @@ module.exports = {
 		}),
 		new HtmlWebpackInlineSVGPlugin(),
 		new CssMinimizerWebpackPligin(),
-		new MiniCssExtractPlugin(),
+		new MiniCssExtractPlugin({
+            filename: "[name].css"
+        }),
 		new CleanWebpackPlugin(),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
