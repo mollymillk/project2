@@ -1,0 +1,25 @@
+.registration_card
+    .registration_card_items 
+        h1 Регистрация аккаунта
+        form(action="")
+            include ../../form_elements/txt_field/txt_field
+            +txt_field("", "Имя")
+            +txt_field("", "Фамилия")
+            .registration_card_radio
+                include ../../form_elements/radio_button/radio_button
+                +radio_button("woman", "Женщина")
+                +radio_button("male", "Мужчина")
+            +txt_field("ДАТА РОЖДЕНИЯ", "Фамилия")
+            +txt_field("ДАННЫЕ ДЛЯ ВХОДА В СЕРВИС", "Email")
+            +txt_field("", "Пароль")
+            .registration_card_toogle
+                include ../../form_elements/toogle/toogle
+                +toogle("Получать спецпредложения")
+
+
+
+
+
+
+
+

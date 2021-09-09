@@ -18,6 +18,7 @@ import "./src/components/form_elements/dropdown/dropdown"
 import "./src/components/form_elements/toogle/toogle.scss"
 import "./src/components/form_elements/like_button/like_button.scss"
 import "./src/components/form_elements/rate_button/rate_button.scss"
+import "./src/components/cards/registration/registration.scss"
 
 import "./src/components/headers_footers/authorized_user_header/authorized_user_header.scss"
 
@@ -38,7 +39,7 @@ img.src=require("svg-url-loader!./src/components/form_elements/like_button/icons
 img.src=require("svg-url-loader!./src/components/form_elements/rate_button/img/rate_button_star.svg");
 img.src=require("svg-url-loader!./src/components/form_elements/rate_button/img/rate_button_star_unchecked.svg");
 
-//img.src=require("./src/asserts/img/bg_image.png")
+img.src=require("./src/asserts/img/bg_image.png")
 
 
 

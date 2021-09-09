@@ -64,7 +64,10 @@ module.exports = {
 			  {
 				test: /\.(png|jpg|gif)$/i,
 				include: path.join(__dirname, "src/asserts/img"),
-					loader: 'file-loader',
+					loader: 'url-loader',
+					options: {
+						limit: false,
+					  },
 				  },
 			  {
 				test: /\.(ttf|eot|woff|svg|woff2)$/,
