@@ -6,15 +6,20 @@
     line-height: 29px;
 } 
 .registration_card {
+    margin-top: 40px;
     width: 380px;
-    height: 646px; 
+    height: 648px; 
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
     > .registration_card_items {
         height: 576;
         width: 320px;
+        padding: 40px 30px 30px 30px;
     }
 }
 h1 {
-    @include form_highlight_style()
+    @include form_highlight_style();
+    margin: 0 0 20px 0;
 }
 .registration_card_radio {
     display: flex;
@@ -26,11 +31,46 @@ h1 {
     flex-direction: row;
     width: 260px;
     height: 24px;
-    > label {
+    > p {
         float: left;
         font-family: 'Montserrat' sans-serif;
         color: rgba(31, 32, 65, 0.75);
         font-size: 14px;
         line-height: 24px;
+        margin: 0 0 0 10px;
     }
 }
+.regi_card_login {
+    display: inline-flex;
+    > p {
+        font-family: 'Montserrat Bold' sans-serif;
+        font-size: 14px;
+        color: #000000;
+        line-height: 18px;
+    }
+    > .regi_button {
+        padding-left: 35px;
+    }
+    
+}
+.registration_card_user_info {
+    > .txt_field_input_label {
+        padding-bottom: 10px;
+    }
+    > .registration_card_radio {
+        padding-bottom: 20px;
+        > .radio {
+            padding-right: 20px;
+        }
+    }
+}
+.registration_card_login_info {
+    padding-top: 20px;
+    > .txt_field_input_label {
+    padding-bottom: 10px;
+    }
+}
+.regi_card_login {
+    padding-top: 30px;
+}
+
