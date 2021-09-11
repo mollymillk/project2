@@ -1,0 +1,21 @@
+mixin room_info(image_name, high, description)
+    .room_info
+        img(src=require("./img/comfort.svg"), alt="", srcset="")
+        .room_info_items 
+            p.room_info_high=high
+            p.room_ingo_description=description
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        style 
+            include ../../../node_modules/air-datepicker/dist/css/datepicker.min.css
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+        script(src='../../../node_modules/air-datepicker/dist/js/datepicker.min.js')
+    body 
+        include ../../components/headers_footers/authorized_user_header/authorized_user_header
+        .room_info
+            +room_info("comfort", "Комфорт", "Окно в каждой из спален")

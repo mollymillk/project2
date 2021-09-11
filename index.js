@@ -23,6 +23,8 @@ import "./src/components/cards/registration/registration.scss"
 import "./src/components/headers_footers/authorized_user_header/authorized_user_header.scss"
 
 import "./src/pages/landing_page/landing_page.scss"
+import "./src/pages/room_detailes/room_detailes.scss"
+
 
 
 

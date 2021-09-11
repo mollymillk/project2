@@ -104,6 +104,11 @@ module.exports = {
 			template: 'src/pages/cards.pug',
 			chuncks: ["cards"]
 		}),
+		new HtmlWebpackPlugin({
+			filename: "room_detailes.html",
+			template: 'src/pages/room_detailes/room_detailes.pug',
+			chuncks: ["room_detailes"]
+		}),
 		new HtmlWebpackInlineSVGPlugin(),
 		new CssMinimizerWebpackPligin(),
 		new MiniCssExtractPlugin({
