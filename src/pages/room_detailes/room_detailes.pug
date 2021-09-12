@@ -1,9 +1,9 @@
 mixin room_info(image_name, high, description)
-    .room_info
-        img(src=require("./img/comfort.svg"), alt="", srcset="")
-        .room_info_items 
+    .room_info_item
+        img(src=require("./img/" + image_name + ".svg"), alt="", srcset="")
+        .room_info_txt
             p.room_info_high=high
-            p.room_ingo_description=description
+            p.room_info_description=description
 doctype html
 html(lang="en")
     head
@@ -18,4 +18,9 @@ html(lang="en")
     body 
         include ../../components/headers_footers/authorized_user_header/authorized_user_header
         .room_info
-            +room_info("comfort", "Комфорт", "Окно в каждой из спален")
+            h2 Сведения о номере
+            +room_info("comfort", "Комфорт", "Шумопоглощающие стены")
+            +room_info("convenience", "Удобство", "Окно в каждой из спален")
+            +room_info("cosiness", "Уют", "Номер оснащен камином")
+        h2 Впечатления от номера
+

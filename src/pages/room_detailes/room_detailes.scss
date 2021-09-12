@@ -1,0 +1,40 @@
+@mixin font_style {
+    font-family: 'Montserrat Bold' sans-serif;
+    color: rgba(31, 32, 65, 0.75);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
+@mixin highlight_style {
+    font-family: 'Montserrat Bold' sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    color: #1f2041;
+    line-height: 23px;
+}
+h2 {
+    @include highlight_style()
+}
+.room_info{
+    width: 291px;
+    height: 273px;
+    display: flex;
+    flex-direction: column;
+    img {
+        padding-top: 4px;
+        float: left;
+    }
+    .room_info_txt {
+    float: left;
+    padding-left: 14px;
+    p.room_info_high {
+        @include font_style();
+        font-weight: bold;
+    }
+    p.room_info_description{
+        @include font_style()
+    }
+}
+}
