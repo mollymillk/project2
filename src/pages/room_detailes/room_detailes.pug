@@ -17,10 +17,14 @@ html(lang="en")
         script(src='../../../node_modules/air-datepicker/dist/js/datepicker.min.js')
     body 
         include ../../components/headers_footers/authorized_user_header/authorized_user_header
-        .room_info
+        .room_detailes_info
             h2 Сведения о номере
             +room_info("comfort", "Комфорт", "Шумопоглощающие стены")
             +room_info("convenience", "Удобство", "Окно в каждой из спален")
             +room_info("cosiness", "Уют", "Номер оснащен камином")
-        h2 Впечатления от номера
+        .room_detailes_impressions
+            h2 Впечатления от номера
+        .room_detailes_impressions_diagram
+            
+            
 

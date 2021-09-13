@@ -60,3 +60,5 @@ global.$ = $;
 
 import "./node_modules/air-datepicker/dist/js/datepicker.min.js"
 import "./src/asserts/dropdownplugin/numbercategoryselector.js"
+import "./src/pages/room_detailes/room_detailes.js"
+
