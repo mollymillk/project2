@@ -4,6 +4,7 @@ mixin room_info(image_name, high, description)
         .room_info_txt
             p.room_info_high=high
             p.room_info_description=description
+
 doctype html
 html(lang="en")
     head
@@ -25,6 +26,12 @@ html(lang="en")
         .room_detailes_impressions
             h2 Впечатления от номера
         .room_detailes_impressions_diagram
+        .room_detailes_impressions_list 
+            ul
+                each item, number in {1: "Великолепно", 2: "Хорошо", 3: "Удовлетворительно", 4: "Разочарован"}
+                    li(class="li_item"+number)= item
+
+        
             
             
 
