@@ -5,7 +5,8 @@
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack",
-    "serv": "static build"
+    "serv": "static build",
+    "watch": "webpack --watch"
   },
   "author": "mollymillk <kristey.z39@gmail.com>",
   "license": "ISC",

@@ -18,14 +18,15 @@ module.exports = {
 	entry: './index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'scripts.js',
+		filename: 'bundle.js',
 	},
+	watch: true,
 	devServer: {
 		contentBase: path.join(__dirname, 'dist'),
-		hot: true, //Hot module replacement
+		hot: true,
 		port: 9000,
 		writeToDisk:true,
-		open: 'chrome', //open in chrome
+		open: 'chrome',
         inline: true,
         host: "localhost",
         watchOptions: {

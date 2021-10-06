@@ -26,6 +26,7 @@ html(lang="en")
         .room_detailes_impressions
             h2 Впечатления от номера
         .room_detailes_impressions_diagram
+            canvas(id="circle")
         .room_detailes_impressions_list 
             ul
                 each item, number in {1: "Великолепно", 2: "Хорошо", 3: "Удовлетворительно", 4: "Разочарован"}
