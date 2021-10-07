@@ -22,6 +22,8 @@ h2 {
     height: 273px;
     display: flex;
     flex-direction: column;
+    float: left;
+    margin-left: 139px;
     img {
         padding-top: 4px;
         float: left;
@@ -38,58 +40,44 @@ h2 {
     }
 }
 }
+.room_detailes_impressions {
+    float: left;
+}
+.room_detailes_impressions_diagram {
+    float: left;
+    width: 120px;
+    height: 121px;
+}
+.room_detailes_impressions_list {
+    float: left;
+}
+ul {
+    list-style: none;
+    @include font_style()
+}
+ ul li::before {
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    // background: red;
+    margin-right: 5px;
+ }
+  ul li.li_item1::before {
+    background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+  }
+  ul li.li_item2::before {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  }
+  ul li.li_item3::before {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+  ul li.li_item4::before {
+    background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+  }
 
-// .room_detailes_impressions_diagram {
-//     width: 120px;
-//     height: 121px;
-//     overflow: hidden;
-//     border-radius: 50%;
-//     position: relative;
-//   }
-  
-//   .diagram-sector {
-//     width: 50%;
-//     height: 50%;
-//     position: absolute;
-//     left: 50%;
-//     top: 0;
-//     transform-origin: left bottom;
-//   }
-  
-//   .room_detailes_impressions_diagram:after {
-//     content: '260 \A голосов';
-//     font-family: 'Montserrat' sans-serif;
-//     font-weight: bold;
-//     font-size: 12px;
-//     line-height: 15px;
-//     color: #BC9CFF;
-//     white-space: pre;
-//     text-align: center;
-//     position: absolute;
-//     width: 92%;
-//     height: 92%;
-//     background: #fff;
-//     border-radius: 50%;
-//     top: 4%;
-//     left: 4%;
-//   }
-//   .room_detailes_impressions_diagram::after::first-word {
-//       font-size: 24px;
-//       line-height: 29px;
-//   }
-//   .room_detailes_impressions_list {
-//       float: left;
-//       > ul {
-//           @include font_style()
-//       }
-//         li {
-//             list-style-type: none;
-//           }
-//         li::before {
-//             content: "";
-//             width: 10px;
-//             height: 10px;
-//         }
-      
-//   }
-  
+  .room_detailes_card {
+    float: left;
+    margin-left: 60px;
+  }

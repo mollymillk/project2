@@ -18,6 +18,7 @@ html(lang="en")
         script(src='../../../node_modules/air-datepicker/dist/js/datepicker.min.js')
     body 
         include ../../components/headers_footers/authorized_user_header/authorized_user_header
+        .room_detailes_images
         .room_detailes_info
             h2 Сведения о номере
             +room_info("comfort", "Комфорт", "Шумопоглощающие стены")
@@ -25,12 +26,18 @@ html(lang="en")
             +room_info("cosiness", "Уют", "Номер оснащен камином")
         .room_detailes_impressions
             h2 Впечатления от номера
-        .room_detailes_impressions_diagram
-            canvas(id="circle")
-        .room_detailes_impressions_list 
-            ul
-                each item, number in {1: "Великолепно", 2: "Хорошо", 3: "Удовлетворительно", 4: "Разочарован"}
-                    li(class="li_item"+number)= item
+            .room_detailes_impressions_diagram
+                canvas(id="circle")
+                    span some text
+            .room_detailes_impressions_list 
+                ul
+                    each item, number in {1: "Великолепно", 2: "Хорошо", 3: "Удовлетворительно", 4: "Разочарован"}
+                        li(class="li_item"+number)= item
+        .room_detailes_comments
+        .room_detailes_card 
+            include ../../components/cards/checkout/checkout_card
+
+            
 
         
             

@@ -20,7 +20,6 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
 	},
-	watch: true,
 	devServer: {
 		contentBase: path.join(__dirname, 'dist'),
 		hot: true,
