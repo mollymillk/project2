@@ -62,10 +62,13 @@ module.exports = {
 				use: 'svgo-loader'
 			  },
 			  {
-				test: /\.(png|jpg|gif)$/i,
-				include: path.join(__dirname, "src/asserts/img"),
-					loader: 'file-loader',
-				  },
+				test: /\.(?:ico|png|jpg|jpeg|gif)$/,
+			  loader: "file-loader",
+			  options: {
+				outputPath: "assets/images",
+				name: "[name].[ext]"
+			  }
+			},
 			  {
 				test: /\.(ttf|eot|woff|svg|woff2)$/,
 				include: [ path.join(__dirname, "./src/asserts/fonts")],
@@ -118,7 +121,12 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery'
-		  })
+		  }),
+		  new CopyPlugin({
+            patterns: [
+                {from: "src/pages/room_detailes/img", to: "img" },
+              ],
+        }),
 	],
 	optimization: {
 		minimize: true,

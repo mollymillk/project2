@@ -14,10 +14,34 @@
     color: #1f2041;
     line-height: 23px;
 }
-h2 {
+body {
+    margin: 0;
+}
+.room_detailes_images {
+    float: left;
+}
+.small_room_img {
+    flex-direction: column;
+    float: left;
+}
+img.bg_1 {
+    width: 981px;
+    height: 485px;
+    float: left;
+}
+img.bg_3 {
+    width: 459px;
+    height: 242px;
+    
+}
+h2.info , h2.impressions {
     @include highlight_style()
 }
-.room_detailes_info{
+.room_detailes_info {
+    flex-direction: row;
+    height: 273px;
+}
+.room_detailes_room_info{
     width: 291px;
     height: 273px;
     display: flex;
@@ -42,6 +66,8 @@ h2 {
 }
 .room_detailes_impressions {
     float: left;
+    width: 311px;
+    height: 170px;
 }
 .room_detailes_impressions_diagram {
     float: left;
@@ -61,7 +87,6 @@ ul {
     height: 10px;
     display: inline-block;
     border-radius: 50%;
-    // background: red;
     margin-right: 5px;
  }
   ul li.li_item1::before {
@@ -81,3 +106,22 @@ ul {
     float: left;
     margin-left: 60px;
   }
+.room_detailes_comments {
+    float: none;
+    width: 712px;
+    height: 306px;
+    //flex-direction: column;
+}
+p.comments {
+    @include highlight_style();
+    //float: left;
+}
+.user {
+    width: 220.45px;
+    height: 48px;
+}
+.comment {
+    width: 712px;
+    height: 72px;
+    flex-direction: row;
+}
