@@ -41,7 +41,7 @@ img.src=require("svg-url-loader!./src/components/form_elements/like_button/icons
 img.src=require("svg-url-loader!./src/components/form_elements/rate_button/img/rate_button_star.svg");
 img.src=require("svg-url-loader!./src/components/form_elements/rate_button/img/rate_button_star_unchecked.svg");
 
-img.src=require("./src/asserts/img/bg_image.png")
+
 
 
 

@@ -49,6 +49,17 @@ module.exports = {
 					'sass-loader'
 					]
 				},
+				{
+					test: /\.(png|jpg|gif)$/i,
+					use: [
+					  {
+						loader: 'url-loader',
+						options: {
+						  limit: 8192,
+						},
+					  },
+					],
+				  },
 			{
 				test: /\.svg$/,
 				type: 'asset/inline',
@@ -125,6 +136,7 @@ module.exports = {
 		  new CopyPlugin({
             patterns: [
                 {from: "src/pages/room_detailes/img", to: "img" },
+                {from: "src/pages/landing_page/img", to: "img" },
               ],
         }),
 	],

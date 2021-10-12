@@ -1,3 +1,25 @@
 .landing_page_content {
-    background-image: url("../../asserts/img/bg_image.png");
+    height: 830px;
+    background: url('img/bg_image.png');
+    img {
+        width: max-content;
+    }
+}
+.landing_page_card {
+    margin-top: 70px;
+    margin-left: 140px;
+}
+.landing_page_text {
+    float: right;
+    margin-right: 134px;
+    margin-top: 320px;
+    p {
+        font-family: 'Montserrat Bold' sans-serif;
+        color: rgba(31, 32, 65, 0.75);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 0;
+    }
 }
