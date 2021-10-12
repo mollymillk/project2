@@ -17,10 +17,19 @@
 body {
     margin: 0;
 }
+.content {
+    display: flex;
+    flex-direction: column;
+}
+.room_detailes_content {
+    display: flex;
+    flex-direction: column;
+}
 .room_detailes_images {
     float: left;
 }
 .small_room_img {
+    display: flex;
     flex-direction: column;
     float: left;
 }
@@ -34,12 +43,17 @@ img.bg_3 {
     height: 242px;
     
 }
-h2.info , h2.impressions {
+h2 {
     @include highlight_style()
 }
 .room_detailes_info {
     flex-direction: row;
     height: 273px;
+}
+.room_detailes_row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
 }
 .room_detailes_room_info{
     width: 291px;
@@ -67,7 +81,7 @@ h2.info , h2.impressions {
 .room_detailes_impressions {
     float: left;
     width: 311px;
-    height: 170px;
+    height: 273px;
 }
 .room_detailes_impressions_diagram {
     float: left;
@@ -103,25 +117,61 @@ ul {
   }
 
   .room_detailes_card {
-    float: left;
+    //float: left;
     margin-left: 60px;
   }
 .room_detailes_comments {
     float: none;
     width: 712px;
     height: 306px;
-    //flex-direction: column;
+    margin-left: 139px;
+    flex-direction: column;
 }
 p.comments {
     @include highlight_style();
     //float: left;
 }
 .user {
-    width: 220.45px;
-    height: 48px;
+    // width: 220.45px;
+    // height: 48px;
+    display: flex;
+    flex-direction: row;
+}
+.user_info {
+    flex-direction: column;
+}
+.user_name{
+    @include font_style();
+    font-weight: bold;
+}
+.user_time {
+    @include font_style();
 }
 .comment {
     width: 712px;
     height: 72px;
+    display: flex;
     flex-direction: row;
+}
+.comment_text {
+    margin: 0;
+    @include font_style();
+}
+.room_detailes_rules {
+    margin-left: 139px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.room_detailes_rules_cancel {
+    margin-left: 100px;
+    p {
+    @include font_style();
+    }
+}
+ul.rules {
+    padding: 0;
+}
+ul li.rule::before {
+    background: rgba(31, 32, 65, 0.25);
 }

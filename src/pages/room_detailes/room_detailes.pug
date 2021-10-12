@@ -4,16 +4,17 @@ mixin room_info(image_name, high, description)
         .room_info_txt
             p.room_info_high=high
             p.room_info_description=description
-mixin user_comment(user_name, time, comment, number)
+mixin user_comment(user_name, time, comment, number, img)
     .room_detailes_comment 
-                img(src="", alt="", srcset="") 
-                .user 
-                    p=user_name
-                    p=time 
-                .comment 
-                    include ../../components/form_elements/like_button/like_button.pug 
-                    +like_button(number)
-                    p=comment
+        .user
+            img(src="img/" + img + ".png" , alt="", srcset="")  
+            .user_info
+                p.user_name=user_name
+                p.user_time=time 
+        .comment 
+            include ../../components/form_elements/like_button/like_button.pug 
+            +like_button(number)
+            p.comment_text=comment
 
 doctype html
 html(lang="en")
@@ -28,31 +29,50 @@ html(lang="en")
         script(src='../../../node_modules/air-datepicker/dist/js/datepicker.min.js')
     body 
         include ../../components/headers_footers/authorized_user_header/authorized_user_header
-        .room_detailes_images
-            img.bg_1(src="img/bg_1.png", alt="", srcset="")
-            .small_room_img
-                img.bg_2(src="img/bg_2.png", alt="", srcset="")
-                img.bg_3(src="img/bg_3.png", alt="", srcset="")
-        .room_detailes_info
-            .room_detailes_room_info
-                h2.info Сведения о номере
-                +room_info("comfort", "Комфорт", "Шумопоглощающие стены")
-                +room_info("convenience", "Удобство", "Окно в каждой из спален")
-                +room_info("cosiness", "Уют", "Номер оснащен камином")
-            .room_detailes_impressions
-                h2.impressions Впечатления от номера
-                .room_detailes_impressions_diagram
-                    canvas(id="circle")
-                        span some text
-                .room_detailes_impressions_list 
-                    ul
-                        each item, number in {1: "Великолепно", 2: "Хорошо", 3: "Удовлетворительно", 4: "Разочарован"}
-                            li(class="li_item"+number)= item
-        .room_detailes_comments
-            p.comments Отзывы посетителей номера
-            +user_comment("Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", "12")
-        //- .room_detailes_card 
-        //-     include ../../components/cards/checkout/checkout_card
+        .content
+            .room_detailes_images
+                img.bg_1(src="img/bg_1.png", alt="", srcset="")
+                .small_room_img
+                    img.bg_2(src="img/bg_2.png", alt="", srcset="")
+                    img.bg_3(src="img/bg_3.png", alt="", srcset="")
+            .room_detailes_row
+                .room_detailes_content    
+                    .room_detailes_info
+                        .room_detailes_room_info
+                            h2.info Сведения о номере
+                            +room_info("comfort", "Комфорт", "Шумопоглощающие стены")
+                            +room_info("convenience", "Удобство", "Окно в каждой из спален")
+                            +room_info("cosiness", "Уют", "Номер оснащен камином")
+                        .room_detailes_impressions
+                            h2.impressions Впечатления от номера
+                            .room_detailes_impressions_diagram
+                                canvas(id="circle")
+                                    span some text
+                            .room_detailes_impressions_list 
+                                ul
+                                    each item, number in {1: "Великолепно", 2: "Хорошо", 3: "Удовлетворительно", 4: "Разочарован"}
+                                        li(class="li_item"+number)= item
+                    .room_detailes_comments
+                        p.comments Отзывы посетителей номера
+                        +user_comment("Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", "12", "user_photo_1")
+                        +user_comment("Патрисия Стёклышкова", "Неделю назад", "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент", "2", "user_photo_2")
+
+                .room_detailes_card 
+                    include ../../components/cards/checkout/checkout_card
+        .room_detailes_rules
+            .room_detailes_rules_description 
+                h2 Правила
+                ul.rules 
+                    li.rule Нельзя с питомцами
+                    li.rule Без вечеринок и мероприятий
+                    li.rule Время прибытия — после 13:00,<br> а выезд до 12:00
+            .room_detailes_rules_cancel
+                h2 Отмена
+                p Бесплатная отмена в течение 48 ч. После 
+                p этого при отмене не позднее чем за 5 дн. до 
+                p прибытия вы получите полный возврат за 
+                p вычетом сбора за услуги.
+            
     
 
             
