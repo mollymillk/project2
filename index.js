@@ -24,6 +24,7 @@ import "./src/components/headers_footers/authorized_user_header/authorized_user_
 
 import "./src/pages/landing_page/landing_page.scss"
 import "./src/pages/room_detailes/room_detailes.scss"
+import "./src/components/headers_footers/footer/footer.scss"
 
 
 
@@ -61,4 +62,5 @@ global.$ = $;
 import "./node_modules/air-datepicker/dist/js/datepicker.min.js"
 import "./src/asserts/dropdownplugin/numbercategoryselector.js"
 import "./src/pages/room_detailes/room_detailes.js"
+import "./src/components/form_elements/like_button/like_button.js"
 

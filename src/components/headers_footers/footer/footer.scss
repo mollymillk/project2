@@ -1,0 +1,80 @@
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin footer_item {
+    font-family: 'Montserrat' sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(31, 32, 65, 0.5);
+    margin-top: 20px;    
+}
+@mixin footer_text {
+    font-family: 'Montserrat' sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    margin: 0;
+}
+.footer_container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 139px;
+    margin-top: 140px;
+}
+.footer_logos {
+    display: flex;
+    flex-direction: column;
+    p {
+        @include footer_text();
+    }
+}
+.footer_logo {
+    margin-bottom: 20px;
+}
+.footer_nav {
+    @include column();
+    margin-left: 40px;
+}
+.footer_about {
+    @include column();
+    margin-left: 57px;
+}
+.footer_support {
+    @include column();
+    margin-left: 92px;
+}
+h3 {
+    font-family: 'Montserrat Bold' sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #1F2041;
+}
+.footer_item {
+    @include footer_item()
+}
+.footer_subscribe {
+    margin-left: 51px;
+    p {
+    @include footer_item();
+    margin: 0;
+    }
+}
+.footer_copyright {
+    margin-left: 139px;
+    display: flex;
+    flex-direction: row;
+    p {
+        @include footer_text();
+        margin-top: 26px;
+        margin-bottom: 26px;
+    }
+}
+.footer_icons {
+    margin-left: 656px;
+    margin-top: 23px;
+    img {
+        margin-left: 20px;
+    }
+}
