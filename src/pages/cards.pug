@@ -7,12 +7,20 @@ html(lang="ru")
         title Document
         style 
             include ../../node_modules/air-datepicker/dist/css/datepicker.min.css
+            include ../asserts/nslider-main/css/nslider.min.css
         script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
-        script(src='../../node_modules/air-datepicker/dist/js/datepicker.min.js')
+        //- script(src='../../node_modules/air-datepicker/dist/js/datepicker.min.js')
+        script(src="../src/asserts/nslider-main/js/nslider.js") 
+
     body 
         include ../components/cards/date/date_card
         include ../components/cards/checkout/checkout_card
         include ../components/cards/login/login_card
         include ../components/cards/registration/registration_card
+        include ../components/cards/room/room_card.pug
+        +room('888', 'люкс','9 990Р', '145')
+        include ../components/cards/room/slider.pug
+
+
 
 

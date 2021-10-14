@@ -137,6 +137,7 @@ module.exports = {
             patterns: [
                 {from: "src/pages/room_detailes/img", to: "img" },
                 {from: "src/pages/landing_page/img", to: "img" },
+                {from: "src/components/cards/room/img", to: "img" },
               ],
         }),
 	],
