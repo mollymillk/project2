@@ -1,14 +1,71 @@
+@mixin bold {
+    font-family: "Montserrat Bold" sans-serif;
+    font-weight: bold;
+    margin: 0;
+    line-height: 23.16px;
+}
+@mixin normal {
+    font-family: "Montserrat" sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    color:rgba(31, 32, 65, 0.5);
+    margin: 0;
+    line-height: 23.16px;
+}
 .room_card {
     height: 279px;
     width: 257.5px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 4px;
 }
 .room_info {
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
+    margin-left: 20px;
+    .symbol {
+        @include bold();
+        font-size: 14px;
+        color: #1f2041;
+    }
+    .room_number {
+        @include bold();
+        font-size: 19px;
+        color: #1f2041;
+    }
+    .room_type {
+        @include bold();
+        color: #BC9CFF;
+    }
+    .room_price {
+        @include bold();
+        font-size: 14px;
+        color: rgba(31, 32, 65, 0.5);
+        margin-left: 32px;
+    }
+    .room_a_day {
+        @include normal();
+    }
+}
+.room_card_line {
+    width: 230px;
+    height: 1px;
+    background: rgba(31, 32, 65, 0.1);
+    border: none;
 }
 .room_rating {
     display: flex;
     flex-direction: row;
+    margin-left: 20px;
+    .room_comments_number {
+        @include bold();
+        font-size: 14px;
+        color: rgba(31, 32, 65, 0.5);
+        margin-left: 20px;
+    }
+    .room_comments {
+        @include normal();
+    }
 }

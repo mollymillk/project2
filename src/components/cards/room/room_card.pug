@@ -1,14 +1,16 @@
 mixin room(room_number, room_type, room_price, room_comments_number)
     .room_card
         .room_photos
-
+            include slider.pug
         .room_info 
             p.symbol №
             p.room_number=room_number 
             p.room_type=room_type
             p.room_price=room_price 
-            p в сутки
+            p.room_a_day в сутки
+        hr.room_card_line
         .room_rating
-
+            include ../../form_elements/rate_button/rate_button.pug
+            +rate_button
             p.room_comments_number=room_comments_number
             p.room_comments Отзывов
