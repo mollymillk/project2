@@ -123,6 +123,11 @@ module.exports = {
 			template: 'src/pages/room_detailes/room_detailes.pug',
 			chuncks: ["room_detailes"]
 		}),
+		new HtmlWebpackPlugin({
+			filename: "search_room.html",
+			template: 'src/pages/search_room/search_room.pug',
+			chuncks: ["search_room"]
+		}),
 		new HtmlWebpackInlineSVGPlugin(),
 		new CssMinimizerWebpackPligin(),
 		new MiniCssExtractPlugin({

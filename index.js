@@ -28,6 +28,7 @@ import "./src/components/headers_footers/authorized_user_header/authorized_user_
 
 import "./src/pages/landing_page/landing_page.scss"
 import "./src/pages/room_detailes/room_detailes.scss"
+import "./src/pages/search_room/search_room.scss"
 import "./src/components/headers_footers/footer/footer.scss"
 
 

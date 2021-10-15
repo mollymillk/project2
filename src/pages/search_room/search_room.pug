@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        style 
+            include ../../../node_modules/air-datepicker/dist/css/datepicker.min.css
+            include ../../asserts/nslider-main/css/nslider.min.css
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+        script(src='../../../node_modules/air-datepicker/dist/js/datepicker.min.js')
+        script(src="../src/asserts/nslider-main/js/nslider.js") 
+    body 
+        include ../../components/headers_footers/authorized_user_header/authorized_user_header
+        aside 
+            include ../../components/form_elements/masked_text_field/masked_text_field.pug
+            +masked_txt_field("ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ", "ДД. ММ. ГГ.")
+            include ../../components/form_elements/dropdown/dropdown 
+            +dropdown("ГОСТИ")
+            .search_room_price 
+                h3 ДИАПОЗОН ЦЕНЫ
+                p.search_room_price_range 5 000₽ - 10 000₽
+                input(type="range")
+                p.search_room_price_text Стоимость за сутки пребывания в номере
+            .search_room_rules
+                h3 ПРАВИЛА ДОМА 
+                include ../../components/form_elements/checkbox/checkbox.pug
+                +checkbox("Можно курить", "smoking")
+                +checkbox("Можно с питомцами", "pets") 
+                +checkbox("Можно пригласить гостей <span>(до 10 человек)</span>", "guests") 
+            .search_room_availability 
+                h3 ДОСТУПНОСТЬ
+        content 
+            h1 Номера, которые мы для вас подобрали
+            .search_room_items
+                include ../../components/cards/room/room_card.pug
+                +room('888', 'люкс','9 990Р', '145')
+                +room('840', '','9 990Р', '65')
+                +room('980', 'люкс','8 500Р', '35')
+                +room('856', '','7 300Р', '19')
+                +room('740', '','6 000Р', '44')
+                +room('982', '','5 890Р', '56')
+                +room('678', '','5 500Р', '45')
+
+
