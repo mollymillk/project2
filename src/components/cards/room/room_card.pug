@@ -1,4 +1,4 @@
-mixin room(room_number, room_type, room_price, room_comments_number)
+mixin room(room_number, room_type, room_price, room_comments_number, number)
     .room_card
         .room_photos
             include slider.pug
@@ -11,6 +11,6 @@ mixin room(room_number, room_type, room_price, room_comments_number)
         hr.room_card_line
         .room_rating
             include ../../form_elements/rate_button/rate_button.pug
-            +rate_button
+            +rate_button(number)
             p.room_comments_number=room_comments_number
             p.room_comments Отзывов

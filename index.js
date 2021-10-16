@@ -13,6 +13,7 @@ import "./src/components/form_elements/date_dropdown/calendar.scss";
 import "./src/components/form_elements/buttons/buttons.scss";
 import "./src/components/form_elements/date_dropdown/calendar.js";
 import "./src/components/form_elements/checkbox/checkbox.scss";
+import "./src/components/form_elements/rich_checkbox_button/rich_checkbox_button.scss";
 import "./src/components/form_elements/radio_button/radio_button.scss";
 import "./src/components/form_elements/dropdown/dropdown"
 import "./src/components/form_elements/toogle/toogle.scss"

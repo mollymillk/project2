@@ -1,0 +1,5 @@
+mixin rich_checkbox(checkbox_txt, checkbox_descr, type)
+  .rich_checkbox(class=type)
+    input.checkbox_input(type="checkbox" id="smoke")
+    label.rich_checkbox_label(for="smoke")= checkbox_txt
+    p.rich_checkbox_description= checkbox_descr

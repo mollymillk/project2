@@ -1,4 +1,8 @@
 mixin dropdown(dropdown_label, dropdown_placeholder)
-  .dropdown_label_input  
-    label.dropdown_label(for="")= dropdown_label
-    input.dropdown_input(name="NCS" type="text" readonly)
+    .dropdown_label_input  
+        label.dropdown_label(for="")= dropdown_label
+        input.dropdown_input(name="NCS" type="text" readonly)
+mixin room_dropdown(dropdown_label, dropdown_placeholder)
+    .dropdown_label_input  
+        label.dropdown_label(for="")= dropdown_label
+        input.dropdown_input(name="room_dropdown" type="text" readonly)

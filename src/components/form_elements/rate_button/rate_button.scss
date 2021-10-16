@@ -1,24 +1,5 @@
-.rating_input + .rating_label::before {
-	cursor: pointer;
-}
-.rating_input {
-    display: none;
-}
 
-.rating_input:not(:checked) + .rating_label::before {
-    content: '';
-    display: inline-flex;
-    background-image: url("~img/rate_button_star_unchecked.svg");
-    background-size:  100%;
-    background-repeat: no-repeat;
-    border: none;
-    //margin-right: 2px;
-    width: 20px;
-    height: 20px;
-
-}
-.rating_input:checked  + .rating_label::before, .rating_input:hover  + .rating_label::before, .rating_input:active  + .rating_label::before {
-    content: '';
+.rating_star {
     display: inline-flex;
     background-image: url("~img/rate_button_star.svg");
     background-size:  100%;
@@ -28,5 +9,14 @@
     width: 20px;
     height: 20px;
 }
-
+.unchecked_item {
+    display: inline-flex;
+    background-image: url("~img/rate_button_star_unchecked.svg");
+    background-size:  100%;
+    background-repeat: no-repeat;
+    border: none;
+    //margin-right: 2px;
+    width: 20px;
+    height: 20px;
+}
 

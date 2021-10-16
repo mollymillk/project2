@@ -8,6 +8,7 @@ html(lang="en")
         style 
             include ../../../node_modules/air-datepicker/dist/css/datepicker.min.css
             include ../../asserts/nslider-main/css/nslider.min.css
+            include ../../asserts/dropdownplugin/numbercategoryselector.css
         script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
         script(src='../../../node_modules/air-datepicker/dist/js/datepicker.min.js')
         script(src="../src/asserts/nslider-main/js/nslider.js") 
@@ -31,16 +32,25 @@ html(lang="en")
                 +checkbox("Можно пригласить гостей <span>(до 10 человек)</span>", "guests") 
             .search_room_availability 
                 h3 ДОСТУПНОСТЬ
+                include ../../components/form_elements/rich_checkbox_button/rich_checkbox_button.pug
+                +rich_checkbox("Широкий коридор", "Ширина коридоров в номере не менее 91 см.", "hallway")
+                +rich_checkbox("Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера.", "helper")
+            include ../../components/form_elements/dropdown/dropdown.pug
+            +room_dropdown("УДОБСТВА НОМЕРА", "УДОБСТВА НОМЕРА")
         content 
             h1 Номера, которые мы для вас подобрали
             .search_room_items
                 include ../../components/cards/room/room_card.pug
-                +room('888', 'люкс','9 990Р', '145')
-                +room('840', '','9 990Р', '65')
-                +room('980', 'люкс','8 500Р', '35')
-                +room('856', '','7 300Р', '19')
-                +room('740', '','6 000Р', '44')
-                +room('982', '','5 890Р', '56')
-                +room('678', '','5 500Р', '45')
+                +room('888', 'люкс','9 990Р', '145', 5)
+                +room('840', '','9 990Р', '65', 4)
+                +room('980', 'люкс','8 500Р', '35', 3)
+                +room('856', '','7 300Р', '19', 5)
+                +room('740', '','6 000Р', '44', 4)
+                +room('982', '','5 890Р', '56', 3)
+                +room('678', '','5 500Р', '45', 5)
+
+
+        include ../../components/headers_footers/footer/footer
+            
 
 

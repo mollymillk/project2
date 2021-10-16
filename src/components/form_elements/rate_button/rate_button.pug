@@ -1,5 +1,25 @@
-mixin rate_button 
+mixin rate_button(number) 
     .rating_group
-        each item in [1,2,3,4,5]
-            input.rating_input(type="checkbox", id="rating_input"+item, value=item)
-            label.rating_label(for="rating_input"+item) 
+        if (number==5)
+            each item in [1,2,3,4,5]
+                .rating_star(for="rating_input"+item) 
+        else if (number==4)
+            each item in [1,2,3,4]
+                .rating_star(for="rating_input"+item) 
+            .unchecked_item  
+        else if (number==3)
+            each item in [1,2,3]
+                .rating_star(for="rating_input"+item)
+            each unchecked_item in [4, 5] 
+                .unchecked_item  
+        else if (number==2)
+            each item in [1,2]
+                .rating_star(for="rating_input"+item) 
+            each unchecked_item in [3, 4, 5] 
+                .unchecked_item 
+        else if (number==4)
+            each item in [1]
+                .rating_star(for="rating_input"+item) 
+            each unchecked_item in [2, 3, 4, 5] 
+                .unchecked_item 
+                
