@@ -1,5 +1,5 @@
 //import "./src/asserts/nullstyle/nullstyle.scss";
-import"./src/asserts/fonts/fonts.scss";
+import"./src/asserts/fonts/fonts.css";
 import "./src/components/cards/date/date_card.scss";
 import "./src/components/cards/checkout/checkout_card.scss";
 import "./src/components/cards/login/login_card.scss";

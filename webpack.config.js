@@ -82,15 +82,8 @@ module.exports = {
 			},
 			  {
 				test: /\.(ttf|eot|woff|svg|woff2)$/,
-				include: [ path.join(__dirname, "./src/asserts/fonts")],
-				use: {
-				  loader: "url-loader",
-				  options: {
-					name: '[name].[ext]',
-					outputPath: 'fonts/',
-					esModule: false
-				  }
-				}
+				type: 'asset/resource',
+				include: path.join(__dirname, "src/asserts/fonts"),
 			  },
 			{
 				test: /\.pug$/,
