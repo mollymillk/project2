@@ -1,5 +1,5 @@
 @mixin form_highlight_style{
-    font-family: 'Montserrat Bold' sans-serif;
+    font-family: 'Montserrat Bold';
     color: #1F2041;
     font-weight: bold;
     font-size: 24px;
@@ -33,7 +33,7 @@ h1 {
     height: 24px;
     > p {
         float: left;
-        font-family: 'Montserrat' sans-serif;
+        font-family: 'Montserrat';
         color: rgba(31, 32, 65, 0.75);
         font-size: 14px;
         line-height: 24px;
@@ -43,7 +43,7 @@ h1 {
 .regi_card_login {
     display: inline-flex;
     > p {
-        font-family: 'Montserrat Bold' sans-serif;
+        font-family: 'Montserrat Bold';
         font-size: 14px;
         color: #000000;
         line-height: 18px;

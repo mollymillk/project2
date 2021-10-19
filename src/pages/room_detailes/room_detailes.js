@@ -2,7 +2,7 @@ var circleData = [
   {
     color_top: '#6FCF97',
     color_bottom: '#66D2EA',
-    start: 0.001,
+    start: 0.0011,
     end: 0.48
   },
   {

@@ -1,11 +1,11 @@
 @mixin bold {
-    font-family: "Montserrat Bold" sans-serif;
+    font-family: "Montserrat Bold";
     font-weight: bold;
     margin: 0;
     line-height: 23.16px;
 }
 @mixin normal {
-    font-family: "Montserrat" sans-serif;
+    font-family: "Montserrat";
     font-weight: normal;
     font-size: 12px;
     color:rgba(31, 32, 65, 0.5);

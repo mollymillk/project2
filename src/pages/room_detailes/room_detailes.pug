@@ -48,7 +48,7 @@ html(lang="en")
                             .room_detailes_impressions_diagram
                                 canvas(id="circle")
                                     span some text
-                            .room_detailes_impressions_list 
+                            .room_detailes_impressions_list
                                 ul
                                     each item, number in {1: "Великолепно", 2: "Хорошо", 3: "Удовлетворительно", 4: "Разочарован"}
                                         li(class="li_item"+number)= item
@@ -73,6 +73,7 @@ html(lang="en")
                 p прибытия вы получите полный возврат за 
                 p вычетом сбора за услуги.
         include ../../components/headers_footers/footer/footer
+        script(src="http://localhost:35729/livereload.js")
         
             
     

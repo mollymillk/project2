@@ -1,37 +1,39 @@
 const path = require('path');
 var webpack = require('webpack')
+const devMode = process.env.NODE_ENV !== "production";
 const CssMinimizerWebpackPligin = require('css-minimizer-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const SVGSpriteSheetPlugin = require('webpack-sass-svg');
 const miniSVGDataURI = require('mini-svg-data-uri');
 const { web } = require('webpack');
+var LiveReloadPlugin = require('webpack-livereload-plugin');
 
  
 module.exports = {
-	mode:'development',
-	target: "web",
 	entry: './index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js',
+		filename: '[hash].bundle.js',
 	},
+	target: "web",
 	devServer: {
-		contentBase: path.join(__dirname, 'dist'),
-		hot: true,
+		contentBase: path.resolve(__dirname, 'dist'),
 		port: 9000,
-		writeToDisk:true,
+		hot: true,
+		writeToDisk: true,
 		open: 'chrome',
         inline: true,
         host: "localhost",
+		liveReload: true,
         watchOptions: {
-            poll: true
+             poll: true
         }
 	  },
+	mode:'development',
 	resolve: {
 		alias: {
 		'a': path.join(__dirname, 'src/')
@@ -41,13 +43,11 @@ module.exports = {
 		rules: [
 			{
 				test: /\.(scss|css)$/,
-				use: [ 
-					'style-loader',
-					MiniCssExtractPlugin.loader,
-					'css-loader',
-					'postcss-loader',
-					'sass-loader'
-					]
+				use: [devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+					"css-loader",
+					"postcss-loader",
+					"sass-loader",
+						]
 				},
 				{
 					test: /\.(png|jpg|gif)$/i,
@@ -138,9 +138,11 @@ module.exports = {
                 {from: "src/components/cards/room/img", to: "img" },
               ],
         }),
-	],
-	optimization: {
-		minimize: true,
-	  },
+		new LiveReloadPlugin(),
+		].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
+
+		optimization: {
+			minimize: true,
+		},
 	
 }
