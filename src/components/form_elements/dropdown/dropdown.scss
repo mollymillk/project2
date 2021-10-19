@@ -5,11 +5,13 @@
 }
 .dropdown_input {
     @include input_style;
+    margin-top: 4px;
 }
 .dropdown_label {
     @include input_text_style();
     font-weight: bold;
     font-size: 12px;
+
 }
 div.NCS.category {
     display: flex;

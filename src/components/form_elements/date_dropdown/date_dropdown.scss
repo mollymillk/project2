@@ -2,7 +2,7 @@
 .date_dropdown_label_input {
     display: flex;
     flex-direction: row;
-    gap: 20px
+    gap: 19px
 }
 .date_dropdown_input {
     @include label_input_style;
@@ -14,8 +14,6 @@
 }
 .date_dropdown_input {
     @include input_style;
-    width: 150px;
-}
-.output_date_dropdown {
-    margin-left: 29px;
+    width: 149px;
+    height: 42px;
 }

@@ -1,13 +1,15 @@
 .date_card
     .date_card_items
         .date_card_txt
-            h1 Найдем номера под 
+            h1 Найдём номера под 
             h1 ваши пожелания 
         include ../../form_elements/date_dropdown/date_dropdown         
-        +date_dropdown("ВЬЕЗД","ВЫЕЗД")
+        +date_dropdown("ПРИБЫТИЕ","ВЫЕЗД")
         include ../../form_elements/dropdown/dropdown 
         +dropdown("ГОСТИ")
         .date_card_button
             include ../../form_elements/buttons/buttons        
             +button("ПОДОБРАТЬ НОМЕР", "full")
+script(src="http://localhost:35729/livereload.js")
+
             
