@@ -1,8 +1,11 @@
-
 jQuery(function($){ 
 $('#enter_calendar').datepicker({
+  navTitles : {
+    days: 'MM <i>yyyy</i>',
+    months: 'yyyy',
+    years: 'yyyy1 - yyyy2'
+  },
     clearButton: true,
-    //todayButton: new Date(),
     minDate: new Date(),
     language: {
       today: "ПРИМЕНИТЬ",
@@ -16,13 +19,14 @@ $('#enter_calendar').datepicker({
    
   onShow: function (dp) {
        if (dp.$datepicker.find('button').html()===undefined) {
-          dp.$datepicker.append('<button type="button" class="uk-button uk-button-primary uk-button-small uk-width-1-1 uk-margin-small-bottom" ><i class="fas fa-check"></i> Ready</button>');
+          dp.$datepicker.append('<button type="button" class="uk-button" ><i class="fas fa-check"></i>ПРИМЕНИТЬ</button>');
           dp.$datepicker.find('button').click(function() {
              dp.hide();
           });
        }
- },
+},
  
-})
+}
+)
 },
 )

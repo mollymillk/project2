@@ -2,20 +2,40 @@
     height: 369px !important;
     width: 320px !important;
 }
+.datepicker--nav {
+    border-bottom: none;
+    padding-top: 19px;
+}
 .datepicker--nav-title {
     font-size: 19px;
     font-weight: bold;
+    font-family: 'Montserrat Bold';
+    line-height: 23px;
+    color: #1F2041;
+    i {
+        font-size: 19px;
+        line-height: 23px;
+        color: #1F2041;
+    }
+}
+.datepicker--days.datepicker--body.active {
+    margin-left: 16px;
+}
+.datepicker--days-names {
+    width: 279.13px;
 }
 .datepicker--day-name {
     color: #BC9CFF;
     font-size: 12px;
     font-weight: bold;
+    text-transform: none;
+    width: 39.88px;
 }
 .datepicker--cell-day {
-    font-family: 'Montserrat' sans-serif;
+    font-family: 'Montserrat';
     font-size: 12px;
     color: #1F2041;
-    opacity: 50%;
+    // opacity: 50%;
     > .-other-month- {
         opacity: 25%;
     }
@@ -23,32 +43,86 @@
 .datepicker--content {
     padding-top: 30px;
 }
+.datepicker--cell.datepicker--cell-day {
+    width: 39.88px;
+    height: 40px;
+}
+.datepicker--cell.-in-range- {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+    width: 40px;
+    height: 40px;
+}
+.datepicker--cell.-current- {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 22px;
+    color: #fff;
+
+}
+.datepicker--cell.datepicker--cell-day.-range-to-.-focus- , .datepicker--cell.datepicker--cell-day.-focus- {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: #fff;
+    border-radius: 22px;
+}
+.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current- , .datepicker--cell.-selected-.-focus- {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.datepicker--cell.-range-from- , .datepicker--cell.-range-to- {
+    border-radius: 22px;
+}
+.datepicker--cell.-range-from- {
+    position: relative;
+}
+.datepicker--cell.-range-from-::before {
+    content:  "";
+    position: absolute;
+    width: 20px;
+    margin-left: 20px;
+    height: 40px;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+}
+.datepicker--cell.-range-to- {
+    position: relative;
+}
+.datepicker--cell.-range-to-::before {
+    content:  "";
+    position: absolute;
+    width: 20px;
+    margin-right: 20px;
+    height: 40px;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+}
+.datepicker--buttons {
+    width: 72px;
+    height: 15px;
+    float: left;
+    padding: 0;
+    border: none;
+}
 .datepicker--button {
     color: #BC9CFF;
-    font-family: 'Montserrat Bold' sans-serif;
+    font-family: 'Montserrat Bold';
     font-weight: bold;
     font-size: 12px;
+    margin-left: 20px;
+    margin-top: 20px;
+    line-height: 15px;
+    height: 15px;
 }
-// #datepickers-container .-selected- {
-//     background: #EF984C;
-//     color: #fff !important;
-//  }#datepickers-container .-current- {
-//     color: #EF984C;
-//  }
-//  #datepickers-container .datepicker--time-sliders > *:not(:first-child) {
-//     margin-top: 9px;
-//     margin-bottom: 6px;
-//  }#datepickers-container .datepicker--time-sliders > *:first-child {
-//     margin-top: 6px;
-//  }
-//  #datepickers-container input[type=range]::-webkit-slider-thumb {
-//     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-//     border: 0px;
-//     height: 22px;
-//     width: 22px;
-//     border-radius: 5px;
-//     background: #EF984Cee;
-//     cursor: pointer;
-//     -webkit-appearance: none;
-//     margin-top: -11px;
-//  }
+.uk-button {
+    color: #BC9CFF;
+    font-family: 'Montserrat Bold';
+    font-weight: bold;
+    font-size: 12px;
+    width: 72px;
+    float: left;
+    border: none;
+    background: none; 
+    margin-left: 124px;
+    margin-top: 20px;
+    height: 15px;
+}
+// .datepicker--cell.datepicker--cell-day.-in-range- + .datepicker--cell.datepicker--cell-day.-range-from-.-selected- {
+//     background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+// }
