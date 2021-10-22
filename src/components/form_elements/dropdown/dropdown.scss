@@ -18,9 +18,9 @@ div.NCS.category {
     flex-direction: row;
     border: none;
     padding: 0;
-    // padding-top: 11px;
-    // padding-bottom: 11px;
-    height: 30px
+    height: 30px;
+    margin-bottom: 1px;
+    margin-top: 6px
 }
 div.NCS.name {
     @include input_text_style;
@@ -31,7 +31,8 @@ div.NCS.parent {
     width: 320px;
     height: 159px;
     border: none;
-    padding: none;
+    padding: 0;
+    text-align: justify;
 }
 a.NCS.close {
     font-family: 'Montserrat Bold';
@@ -39,11 +40,13 @@ a.NCS.close {
     color: #bc9cff;
     text-decoration: none;
     font-weight: bold;
+    margin-left: 143px;
+    float: left;
 }
 div.NCS.buttons {
     display: flex;
     flex-direction: row-reverse;
-    margin-right: 0;
+    margin-right: 7px;
 }
 a.NCS.button.minus {
     height: 30px;
@@ -66,7 +69,29 @@ a.NCS.button.plus {
 }
 div.NCS.text {
     height: 15px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    margin-left: 15px;
 }
 div.NCS.value {
-    line-height: 15px;
+    height: 15px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    margin-right: 13px;
+    margin-left: 13px;
+}
+div.NCS.name, a.NCS.close, div.NCS.value {
+    font-family: 'Montserrat Bold';
+}
+
+.clear_button {
+    border: none;
+    background: none;
+    font-family: 'Montserrat Bold';
+    font-size: 12px;
+    color: #bc9cff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+    float: left;
 }

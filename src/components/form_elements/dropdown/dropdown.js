@@ -13,18 +13,13 @@ $(function() {
         showZero: false,
     });
 })
+
 $(function() {
-    $("input[name='room_dropdown']").NCS({
-        categoryNames: ["ВЗРОСЛЫЕ", "ДЕТИ", "МЛАДЕНЦЫ"],
-        categoryValues: false,
-        minValue: 0,
-        maxValue: 10,
-        closeOnOutsideClick: true,
-        showText: true,
-        delimiter: ", ",
-        align: "left",
-        fade: true,
-        useDisplay: true,
-        showZero: false,
-    });
+    $('.NCS.close').before('<button class="clear_button" onclick="clear()">ОЧИСТИТЬ</button>')
 })
+
+function clear() {
+    alert('hiii')
+}
+
+
