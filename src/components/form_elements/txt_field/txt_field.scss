@@ -34,4 +34,6 @@
 .txt_field_input::placeholder {
     @include input_text_style();
     opacity: 50%;
+    font-family: 'Montserrat';
+    padding-left: 14px;
   }

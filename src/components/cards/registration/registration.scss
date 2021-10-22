@@ -16,6 +16,7 @@
         width: 320px;
         padding: 40px 30px 30px 30px;
     }
+
 }
 h1 {
     @include form_highlight_style();
@@ -29,6 +30,7 @@ h1 {
 .registration_card_toogle {
     display: flex;
     flex-direction: row;
+    margin-top: 5px;
     width: 260px;
     height: 24px;
     > p {
@@ -36,25 +38,24 @@ h1 {
         font-family: 'Montserrat';
         color: rgba(31, 32, 65, 0.75);
         font-size: 14px;
-        line-height: 24px;
         margin: 0 0 0 10px;
     }
 }
 .regi_card_login {
     display: inline-flex;
     > p {
-        font-family: 'Montserrat Bold';
+        font-family: 'Montserrat';
         font-size: 14px;
         color: #000000;
         line-height: 18px;
     }
     > .regi_button {
-        padding-left: 35px;
+        margin-left: 35px;
     }
     
 }
 .registration_card_user_info {
-    > .txt_field_input_label {
+    .txt_field_input_label {
         padding-bottom: 10px;
     }
     > .registration_card_radio {
@@ -66,11 +67,19 @@ h1 {
 }
 .registration_card_login_info {
     padding-top: 20px;
-    > .txt_field_input_label {
-    padding-bottom: 10px;
+    .txt_field_input_label {
+        .txt_field_input {
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
     }
 }
 .regi_card_login {
     padding-top: 30px;
 }
+
+.registration_pay_button {
+    margin-top: 20px;
+}
+
 

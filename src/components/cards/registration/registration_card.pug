@@ -8,8 +8,8 @@
                 +txt_field("", "Фамилия")
                 .registration_card_radio
                     include ../../form_elements/radio_button/radio_button
-                    +radio_button("woman", "Женщина")
-                    +radio_button("male", "Мужчина")
+                    +radio_button("woman", "Женщина", '1')
+                    +radio_button("male", "Мужчина", '2')
                 +txt_field("ДАТА РОЖДЕНИЯ", "Фамилия")
             .registration_card_login_info
                 +txt_field("ДАННЫЕ ДЛЯ ВХОДА В СЕРВИС", "Email")
@@ -18,6 +18,9 @@
                 include ../../form_elements/toogle/toogle
                 +toogle("")
                 p Получать спецпредложения
+            .registration_pay_button 
+                include ../../form_elements/buttons/buttons
+                +button("ПЕРЕЙТИ К ОПЛАТЕ", "full")
             .regi_card_login
                 p Уже есть аккаунт на Toxin
                 include ../../form_elements/buttons/buttons

@@ -18,21 +18,21 @@
     content: '';
     display: inline-flex;
     border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    border-radius: 10px;
+    width: 19px;
+    height: 19px;
     margin-right: 9.74px;
 
 }
 .radio_input:checked  + .radio_label::before {
     content: '';
-    border: 1px solid #bc9cff;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    border: 3px solid #fff;
+    outline: 1px solid #bc9cff;
+    border-radius: 10px;
+    width: 12px;
+    height: 12px;
     margin-right: 9.74px;
-    background-image: url("~checked_circle.svg");
-    background-size: 65%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     background-repeat: no-repeat;
     background-position: center;
 }

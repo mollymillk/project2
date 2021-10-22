@@ -1,4 +1,4 @@
-mixin checkbox (checkbox_txt, type)
+mixin checkbox (checkbox_txt, value)
   .checkbox
-    input.checkbox_input(type="checkbox" id="smoke")
+    input.checkbox_input(type="checkbox" value=value id="smoke")
     label.checkbox_label(for="smoke")= checkbox_txt
