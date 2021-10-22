@@ -1,7 +1,8 @@
-mixin room(room_number, room_type, room_price, room_comments_number, number)
+mixin room(room_number, room_type, room_price, room_comments_number, number, card_number)
     .room_card
         .room_photos
             include slider.pug
+            +slider(card_number)
         .room_info 
             p.symbol №
             p.room_number=room_number 

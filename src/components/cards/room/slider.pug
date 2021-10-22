@@ -1,14 +1,15 @@
-.container
-    .nslider
-        .nslider-wrapper
-            #slide-1.nslider-slide
-                img.slide(src="img/slide_1.png", alt="", srcset="")
-            #slide-2.nslider-slide
-                img.slide(src="img/slide_2.png", alt="", srcset="")
-            #slide-3.nslider-slide
-                img.slide(src="img/slide_1.png", alt="", srcset="")
-            #slide-4.nslider-slide
-                img.slide(src="img/slide_3.png", alt="", srcset="")
-        .nslider-button.nslider-button-prev
-        .nslider-button.nslider-button-next
+mixin slider(card_number)
+    .container(class = card_number)
+        .nslider
+            .nslider-wrapper
+                #slide-1.nslider-slide
+                    img.slide(src="img/slide_1.png", alt="", srcset="")
+                #slide-2.nslider-slide
+                    img.slide(src="img/slide_2.png", alt="", srcset="")
+                #slide-3.nslider-slide
+                    img.slide(src="img/slide_1.png", alt="", srcset="")
+                #slide-4.nslider-slide
+                    img.slide(src="img/slide_3.png", alt="", srcset="")
+            .nslider-button.nslider-button-prev
+            .nslider-button.nslider-button-next
 
