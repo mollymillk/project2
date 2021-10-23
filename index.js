@@ -50,7 +50,7 @@ img.src=require("svg-url-loader!./src/components/form_elements/rate_button/img/r
 
 
 
-
+import './node_modules/material-icons/iconfont/material-icons.css';
 
 
 //img.src=require("svg-url-loader!./src/components/form_elements/buttons/arrow.svg");

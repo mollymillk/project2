@@ -2,14 +2,20 @@
     text-align: center;
     height: 44px; 
     border-radius: 22px;
-    > p {
-        font-family: 'Montserrat';
+    p {
+        font-family: 'Montserrat Bold';
         font-size: 12px;
-        font-weight: 700;
+        line-height: 15px;
         margin: 0;
-        max-width: 132px;
-        position: relative;
     } 
+    span {
+        position: relative;
+        z-index: 2;
+        right: 4px;
+        float: right;
+        font-size: 24px;
+        color: #fff;
+    }
 }
 @mixin bg_button {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -28,6 +34,8 @@
     z-index: 1;
     > p {
         display: inline-block;
+        margin-top: 5px;
+        margin-left: 24px;
     }
 }
 .full_button:hover {
