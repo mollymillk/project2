@@ -17,3 +17,37 @@
     width: 149px;
     height: 42px;
 }
+.enter_date_dropdown {
+    height: 64.44px;
+    span {
+        position: relative;
+        z-index: 2;
+        line-height: 24px;
+        font-size: 24px;
+        width: 44px;
+        color: rgba(31, 32, 65, 0.5);
+        left: 125px;
+        bottom: 35px;
+    }
+}
+
+.outgo_date_dropdown {
+    height: 64.44px;
+    span {
+        position: relative;
+        z-index: 2;
+        line-height: 24px;
+        font-size: 24px;
+        width: 44px;
+        color: rgba(31, 32, 65, 0.5);
+        left: 125px;
+        bottom: 35px;
+    }
+}
+.date_dropdown_input::placeholder {
+    font-family: "Montserrat";
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 14px;
+    color: rgba(31, 32, 65);
+}

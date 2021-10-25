@@ -1,7 +1,8 @@
 mixin dropdown(dropdown_label, dropdown_placeholder)
     .dropdown_label_input  
         label.dropdown_label(for="")= dropdown_label
-        input.dropdown_input(name="NCS" type="text" readonly)
+        input.dropdown_input(name="NCS" type="text" readonly placeholder=dropdown_placeholder)
+        span.material-icons expand_more
 mixin room_dropdown(dropdown_label, dropdown_placeholder)
     .dropdown_label_input  
         label.dropdown_label(for="")= dropdown_label

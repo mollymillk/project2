@@ -4,9 +4,9 @@
             h1 Найдём номера под 
             h1 ваши пожелания 
         include ../../form_elements/date_dropdown/date_dropdown         
-        +date_dropdown("ПРИБЫТИЕ","ВЫЕЗД")
+        +date_dropdown("ПРИБЫТИЕ","ВЫЕЗД", "ДД. ММ. ГГГГ.")
         include ../../form_elements/dropdown/dropdown 
-        +dropdown("ГОСТИ")
+        +dropdown("ГОСТИ", "Сколько гостей")
         .date_card_button
             include ../../form_elements/buttons/buttons        
             +button("ПОДОБРАТЬ НОМЕР", "full")

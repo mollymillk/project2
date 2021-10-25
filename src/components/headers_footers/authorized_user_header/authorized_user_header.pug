@@ -6,9 +6,9 @@ header
             .header_item
                 a.menu_item(class='menu_item'+key href="http://bbro.jj")= menuItem
                 if key==2 
-                    img.menu_mark(src=require("/src/components/headers_footers/authorized_user_header/img/header_check_mark.svg"), alt="", srcset="")
+                    span.material-icons expand_more
                 if key==5
-                    img.menu_mark(src=require("/src/components/headers_footers/authorized_user_header/img/header_check_mark.svg"), alt="", srcset="")
+                    span.material-icons expand_more
     .header_login_button 
         include ../../form_elements/buttons/buttons
         +button("ВОЙТИ", "no_bg")

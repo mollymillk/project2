@@ -9,21 +9,24 @@
                 p.checkout_price 9 990₽
                 p.time_of_booking в сутки
         include ../../form_elements/date_dropdown/date_dropdown         
-        +date_dropdown("ВЬЕЗД","ВЫЕЗД")
+        +date_dropdown("ВЬЕЗД","ВЫЕЗД", "ДД. ММ. ГГГГ.")
         include ../../form_elements/dropdown/dropdown 
-        +dropdown("ГОСТИ")
+        +dropdown("ГОСТИ", "Сколько гостей")
         .checkout_room_cost
             .cost_of_booking_time 
                 p.checkout_description 9 990₽ х 4 суток
                 p.checkout_cost 39 960₽
             .service_fee 
                 p.checkout_description Сбор за услуги: скидка 2 179₽
+                    span i 
                 p.checkout_cost 0₽
             .additional_services
                 p.checkout_description Сбор за дополнительные услуги
+                    span i
                 p.checkout_cost 300₽
             .checkout_total_cost 
                 p.total_cost Итого
+                .checkout_total_cost_line
                 p.amount_total_cost 38 081₽
         .checkout_card_button
             include ../../form_elements/buttons/buttons        

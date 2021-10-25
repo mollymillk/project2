@@ -1,6 +1,7 @@
 mixin room_info(image_name, high, description)
     .room_info_item
-        img(src=require("./img/" + image_name + ".svg"), alt="", srcset="")
+        .room_info_icon
+            span.material-icons=image_name
         .room_info_txt
             p.room_info_high=high
             p.room_info_description=description
@@ -40,9 +41,9 @@ html(lang="en")
                     .room_detailes_info
                         .room_detailes_room_info
                             h2.info Сведения о номере
-                            +room_info("comfort", "Комфорт", "Шумопоглощающие стены")
-                            +room_info("convenience", "Удобство", "Окно в каждой из спален")
-                            +room_info("cosiness", "Уют", "Номер оснащен камином")
+                            +room_info("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                            +room_info("location_city", "Удобство", "Окно в каждой из спален")
+                            +room_info("whatshot", "Уют", "Номер оснащен камином")
                         .room_detailes_impressions
                             h2.impressions Впечатления от номера
                             .room_detailes_impressions_diagram
@@ -74,6 +75,7 @@ html(lang="en")
                 p вычетом сбора за услуги.
         include ../../components/headers_footers/footer/footer
         script(src="http://localhost:35729/livereload.js")
+        script(src="./dist/bundle.js") 
         
             
     

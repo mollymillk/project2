@@ -23,17 +23,17 @@
     }
 }
 .checkout_number_price {
-    >.checkout_room_info {
+    .checkout_room_info {
         display: inline-block;
-    >p {
+    p {
         @include checkout_txt_style();
         display: inline-block;
     }
 }
-    >.checkout_room_price{
+    .checkout_room_price{
         display: inline-block;
         padding-left: 110px;
-        >p {
+        p {
             @include checkout_txt_style();
             display: inline-block;
             opacity: 50%;
@@ -69,17 +69,45 @@
 }
 .checkout_cost {
     @include checkout_room_cost_txt_style;
-    display: inline-block;
+    display: inline;
+    float: right;
+}
+.checkout_total_cost {
+    display: inline;
 }
 .total_cost {
     @include checkout_txt_style;
+    float: left;
+    font-size: 19px;
+    color: #1F2041;
+    display: inline-block;
+    font-family: "Montserrat Bold";
+}
+.amount_total_cost {
+    @include checkout_txt_style;
+    float: left;
+    font-family: "Montserrat Bold";
     font-size: 19px;
     color: #1F2041;
     display: inline-block;
 }
-.amount_total_cost {
-    @include checkout_txt_style;
-    font-size: 19px;
-    color: #1F2041;
-    display: inline-block;
+.checkout_description {
+    span {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 46%;
+    font-family: "Montserrat";
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(31, 32, 65, 0.25);
+    margin-left: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    }
+}
+.checkout_total_cost_line {
+    border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
+    width: 182px;
+    height: 1px;
+    float: left;
+    margin-top: 40px;
 }

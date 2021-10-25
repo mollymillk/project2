@@ -27,17 +27,21 @@ menu {
     font-size: 14px;
     color: rgba(31, 32, 65, 0.5);
     line-height: 17px;
-    margin-top: 32px;
 }
 .menu_item:hover {
     font-family: 'Montserrat';
     font-weight: bold;
     color: rgba(31, 32, 65, 0.75);
 }
-.menu_mark {
-    width: 12px;
-    height: 8px;
-    padding-left: 8px;
+.header_item {
+    display: flex;
+    flex-direction: row;
+    span {
+        color: rgba(31, 32, 65, 0.5);
+        font-size: 24px;
+        line-height: 17px;
+        margin: 0;
+    }
 }
 .header_login_button {
     > button {

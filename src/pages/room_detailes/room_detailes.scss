@@ -7,6 +7,15 @@
     line-height: 24px;
     margin: 0;
 }
+@mixin font_description_style {
+    font-family: 'Montserrat';
+    color: rgba(31, 32, 65, 0.75);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
 @mixin highlight_style {
     font-family: 'Montserrat Bold';
     font-size: 19px;
@@ -46,6 +55,18 @@ img.bg_3 {
 h2 {
     @include highlight_style()
 }
+.room_info_item {
+    display: flex;
+    flex-direction: row;
+}
+.room_info_icon span {
+    // background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
+    background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-size: 48px;
+    line-height: 41px;
+}
 .room_detailes_info {
     flex-direction: row;
     height: 273px;
@@ -74,7 +95,7 @@ h2 {
         font-weight: bold;
     }
     p.room_info_description{
-        @include font_style()
+        @include font_description_style()
     }
 }
 }
@@ -93,7 +114,7 @@ h2 {
 }
 ul {
     list-style: none;
-    @include font_style()
+    @include font_description_style()
 }
  ul li::before {
     content: ' ';
@@ -145,7 +166,7 @@ p.comments {
     font-weight: bold;
 }
 .user_time {
-    @include font_style();
+    @include font_description_style();
 }
 .comment {
     width: 712px;
@@ -155,7 +176,7 @@ p.comments {
 }
 .comment_text {
     margin: 0;
-    @include font_style();
+    @include font_description_style();
 }
 .room_detailes_rules {
     margin-left: 139px;
@@ -166,7 +187,7 @@ p.comments {
 .room_detailes_rules_cancel {
     margin-left: 100px;
     p {
-    @include font_style();
+    @include font_description_style();
     }
 }
 ul.rules {

@@ -1,9 +1,11 @@
-mixin date_dropdown(enter_label, outgo_label)
-  .date_dropdown_label_input
-    .enter_date_dropdown 
-      label.date_form_label(for="enter")= enter_label
-      input.date_dropdown_input(type="text" id="enter_calendar" data-range="true" data-multiple-dates-separator=" - ")
-    .outgo_date_dropdown
-      label.date_form_label(for="outgo")= outgo_label
-      input.date_dropdown_input(type="text", id="outgo_calendar" name="")
-  block
+mixin date_dropdown(enter_label, outgo_label, date_dropdown_placeholder)
+    .date_dropdown_label_input
+        .enter_date_dropdown 
+            label.date_form_label(for="enter")= enter_label
+            input.date_dropdown_input(type="text" id="enter_calendar" data-range="true" data-multiple-dates-separator=" - " placeholder=date_dropdown_placeholder)
+            span.material-icons expand_more
+        .outgo_date_dropdown
+            label.date_form_label(for="outgo")= outgo_label
+            input.date_dropdown_input(type="text", id="outgo_calendar" name="" placeholder=date_dropdown_placeholder readonly)
+            span.material-icons expand_more
+    block
